@@ -254,7 +254,7 @@ function spikeActive(s){ return s.set === curState().plat; }
 
 function loadLevel(i){
   levelIdx = i; level = LEVELS[i];
-  ring = 0; tutIdx = 0; shiftCD = 0;
+  ring = 0; tutIdx = 0; shiftCD = 0; coyote = 0; airFlip = true;
   player.x = level.spawn.x; player.y = level.spawn.y;
   player.vx = 0; player.vy = 0; player.grounded = false;
   camX = 0; particles = [];
@@ -262,11 +262,13 @@ function loadLevel(i){
 function respawn(){
   player.x = level.spawn.x; player.y = level.spawn.y;
   player.vx = 0; player.vy = 0;
-  ring = 0; shiftCD = 0;
+  ring = 0; shiftCD = 0; coyote = 0; airFlip = true;
 }
 
 let denyT = 0; // ratchet deny feedback timer
 let shiftCD = 0; // shift cooldown (s): anti spam-shift hover/spike-dodge — a shift within 0.4s of the last one is ignored
+let coyote = 0;  // seconds since last grounded (0.12s input grace for gravity flips)
+let airFlip = true; // one mid-air gravity reversal per airborne period (reset on landing); any gravity flip spends it — kills the pit yo-yo while keeping fall-and-flip island hops legal
 function inRatchet(){
   const r = level.ratchet;
   return r && player.x >= r.x0 && player.x <= r.x1;
@@ -280,7 +282,14 @@ function shift(dir){
     denyT = 1.0; shake = Math.max(shake, 4); tone(140, 90, 0.15, "sawtooth", 0.06);
     return;
   }
-  ring = (ring + dir + CONFIG.states.length) % CONFIG.states.length;
+  const next = (ring + dir + CONFIG.states.length) % CONFIG.states.length;
+  const gravFlip = CONFIG.states[next].grav !== curState().grav;
+  if (gravFlip && !player.grounded && coyote <= 0 && !airFlip){
+    denyT = 1.0; shake = Math.max(shake, 4); tone(140, 90, 0.15, "sawtooth", 0.06);
+    return;
+  }
+  ring = next;
+  if (gravFlip) airFlip = false;
   shiftCD = 0.4;
   flash = 0.35; shake = Math.max(shake, 3);
   burst(player.x + 15, player.y + 15, curState().plat === "A" ? curState().platA : curState().platB);
@@ -402,6 +411,7 @@ function step(dt){
       player.y = p.y + PH; player.vy = 0; player.grounded = true;
     }
   }
+  if (player.grounded) { coyote = 0.12; airFlip = true; } else coyote -= dt;
   let box = { x: player.x, y: player.y, w: S, h: S };
   // spikes
   box = { x: player.x + 5, y: player.y + 5, w: S - 10, h: S - 10 };
