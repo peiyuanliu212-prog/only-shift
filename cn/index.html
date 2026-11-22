@@ -114,12 +114,31 @@ const LEVELS = [
       { x:2850, y:460, w:600,  set:"AB" }
     ],
     spikes: [
-      { x:1050, y:460, set:"A" }
+      { x:1050, y:460, set:"A" },
+      { x:1600, y:58,  set:"B", hang:true }
     ],
     goal: { x: 3150, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 5 关 · 尖刺交织",
+    name: "第 5 关 · 错峰",
+    width: 3700, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-40,  y:460, w:700,  set:"AB" },
+      { x:540,  y:96,  w:820,  set:"B"  },
+      { x:1260, y:460, w:820,  set:"AB" },
+      { x:1980, y:96,  w:820,  set:"A"  },
+      { x:2700, y:460, w:900,  set:"AB" }
+    ],
+    spikes: [
+      { x:1500, y:460, set:"A" },
+      { x:1800, y:460, set:"B" },
+      { x:2350, y:120, set:"B", hang:true }
+    ],
+    goal: { x: 3380, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 6 关 · 尖刺交织",
     width: 3500, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
@@ -136,12 +155,13 @@ const LEVELS = [
       { x:1150, y:460, set:"B" },
       { x:1420, y:460, set:"A" },
       { x:1850, y:120, set:"B", hang:true },
-      { x:2500, y:120, set:"A", hang:true }
+      { x:2500, y:120, set:"A", hang:true },
+      { x:2950, y:460, set:"A" }
     ],
     goal: { x: 3280, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 6 关 · 浮岛",
+    name: "第 7 关 · 浮岛",
     width: 2500, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
@@ -153,12 +173,35 @@ const LEVELS = [
     ],
     spikes: [
       { x:1050, y:340, set:"A" },
-      { x:1500, y:222, set:"B", hang:true }
+      { x:1500, y:222, set:"B", hang:true },
+      { x:1950, y:460, set:"A" }
     ],
     goal: { x: 2250, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 7 关 · 终局",
+    name: "第 8 关 · 双棘轮",
+    width: 3800, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 300, x1: 1500 },
+    ratchet2: { x0: 2100, x1: 3400 },
+    platforms: [
+      { x:-40,  y:460, w:640,  set:"AB" },
+      { x:600,  y:460, w:260,  set:"B"  },
+      { x:860,  y:460, w:560,  set:"AB" },
+      { x:-40,  y:36,  w:3880, set:"AB" },
+      { x:1820, y:460, w:340,  set:"A"  },
+      { x:2160, y:460, w:560,  set:"AB" },
+      { x:2720, y:460, w:260,  set:"B"  },
+      { x:2980, y:460, w:760,  set:"AB" }
+    ],
+    spikes: [
+      { x:1050, y:460, set:"A" },
+      { x:2400, y:460, set:"B" }
+    ],
+    goal: { x: 3520, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 9 关 · 试炼",
     width: 4100, spawn: { x: 60, y: 400 },
     hint: "",
     ratchet: { x0: 2500, x1: 3650 },
@@ -176,9 +219,36 @@ const LEVELS = [
     ],
     spikes: [
       { x:1050, y:460, set:"A" },
-      { x:2150, y:120, set:"B", hang:true }
+      { x:2150, y:120, set:"B", hang:true },
+      { x:3180, y:460, set:"A" }
     ],
     goal: { x: 3850, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 10 关 · 四相终局",
+    width: 4700, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 3150, x1: 4450 },
+    platforms: [
+      { x:-40,  y:460, w:600,  set:"AB" },
+      { x:560,  y:460, w:260,  set:"B"  },
+      { x:820,  y:460, w:480,  set:"AB" },
+      { x:1200, y:96,  w:760,  set:"B"  },
+      { x:1800, y:96,  w:700,  set:"A"  },
+      { x:2400, y:460, w:850,  set:"AB" },
+      { x:-40,  y:36,  w:4680, set:"AB" },
+      { x:3250, y:460, w:260,  set:"B"  },
+      { x:3510, y:460, w:560,  set:"AB" },
+      { x:4200, y:460, w:480,  set:"AB" }
+    ],
+    spikes: [
+      { x:1050, y:460, set:"A" },
+      { x:2150, y:120, set:"B", hang:true },
+      { x:2750, y:460, set:"B" },
+      { x:2950, y:460, set:"A" },
+      { x:3750, y:460, set:"A" }
+    ],
+    goal: { x: 4450, y: 368, w: 44, h: 92, surf: 460 }
   }
 ];
 
@@ -215,14 +285,23 @@ const TUT = [
     { at: 1150, text: "长缺口需要回到黎明——但你退不回去。只能向前绕一整圈，走头顶的轨道。", done: { ring: 2 } }
   ],
   [
+    { at: 0,    text: "错峰：地板和天花板轮着用，连翻两次是常态。", done: { x: 420 } }
+  ],
+  [
     { at: 0,    text: "尖刺交织：这块地板不会变。你的状态决定哪些刺是真的。", done: { x: 220 } }
   ],
   [
     { at: 0,    text: "浮岛两面都能用：黎明时站在上面，夜幕时挂在下面。", done: { x: 420 } }
   ],
   [
-    { at: 0,    text: "终局。你学会的全部，一次跑完。", done: { x: 420 } },
+    { at: 0,    text: "双棘轮：两段红区，中间一段能喘口气。规矩一样——只能向前。", done: { x: 420 } }
+  ],
+  [
+    { at: 0,    text: "试炼。你学会的全部，一次跑完。", done: { x: 420 } },
     { at: 2350, text: "又是棘轮区——只能向前，一直到旗子。", done: { x: 2950 } }
+  ],
+  [
+    { at: 0,    text: "四相终局：全部机制，一次跑完。稳住节奏。", done: { x: 420 } }
   ]
 ];
 let tutIdx = 0;
@@ -259,9 +338,67 @@ let unlocked = 0;
 try { unlocked = Math.max(0, Math.min(LEVELS.length - 1, parseInt(localStorage.getItem("sixiang_save_v1") || "0", 10) || 0)); } catch(e) {}
 function saveUnlock(){ try { localStorage.setItem("sixiang_save_v1", String(unlocked)); } catch(e) {} }
 let titleBtns = [];
+let uiBtns = [];
+let titlePanel = null;          // null | "board" | "ach"
 function startLevel(i){
   audio();
-  screen = "play"; loadLevel(i); runTime = 0; deaths = 0; Music.start();
+  runTime = 0; deaths = 0; runShifts = 0; achToast = "";
+  screen = "play"; loadLevel(i); Music.start();
+}
+
+/* ---------------- 计数 / 设置 / 成绩 / 成就（全部本地，写失败不堵流程） ---------------- */
+let runShifts = 0;              // 本轮全程移位次数
+let levelShifts = 0, levelTime = 0, levelDeathsStart = 0;
+let sfxOn = true;
+const settings = { music: true, sfx: true };
+try {
+  const s = JSON.parse(localStorage.getItem("sixiang_settings_v1") || "null");
+  if (s) { settings.music = s.music !== false; settings.sfx = s.sfx !== false; }
+} catch(e) {}
+sfxOn = settings.sfx;
+function saveSettings(){ try { localStorage.setItem("sixiang_settings_v1", JSON.stringify(settings)); } catch(e) {} }
+
+let records = { lv: [], run: { t: null, s: null } };
+try {
+  const r = JSON.parse(localStorage.getItem("sixiang_records_v1") || "null");
+  if (r && Array.isArray(r.lv) && r.run) records = r;
+} catch(e) {}
+function saveRecords(){ try { localStorage.setItem("sixiang_records_v1", JSON.stringify(records)); } catch(e) {} }
+
+const ACH = [
+  { id: "first",  name: "第一步",   desc: "通关第 1 关" },
+  { id: "half",   name: "过半",     desc: "通关第 4 关" },
+  { id: "all",    name: "全境移位", desc: "通关全部 10 关" },
+  { id: "clean",  name: "毫发无损", desc: "任意一关零死亡通关" },
+  { id: "frugal", name: "精打细算", desc: "全程不超过 150 次移位通关" },
+  { id: "swift",  name: "疾风",     desc: "全程 300 秒内通关" }
+];
+let achDone = [];
+try { achDone = JSON.parse(localStorage.getItem("sixiang_ach_v1") || "[]"); if (!Array.isArray(achDone)) achDone = []; } catch(e) {}
+let achToast = "";
+function unlockAch(id){
+  if (achDone.includes(id)) return;
+  achDone.push(id);
+  try { localStorage.setItem("sixiang_ach_v1", JSON.stringify(achDone)); } catch(e) {}
+  const a = ACH.find(a => a.id === id);
+  if (a) achToast = "成就达成 · " + a.name;
+}
+function commitLevel(){
+  const rec = records.lv[levelIdx] || { t: null, s: null };
+  if (rec.t === null || levelTime < rec.t) rec.t = Math.round(levelTime * 10) / 10;
+  if (rec.s === null || levelShifts < rec.s) rec.s = levelShifts;
+  records.lv[levelIdx] = rec; saveRecords();
+  if (levelIdx === 0) unlockAch("first");
+  if (levelIdx === 3) unlockAch("half");
+  if (deaths === levelDeathsStart) unlockAch("clean");
+}
+function commitRun(){
+  if (records.run.t === null || runTime < records.run.t) records.run.t = Math.round(runTime * 10) / 10;
+  if (records.run.s === null || runShifts < records.run.s) records.run.s = runShifts;
+  saveRecords();
+  unlockAch("all");
+  if (runShifts <= 150) unlockAch("frugal");
+  if (runTime <= 300) unlockAch("swift");
 }
 
 function curState(){ return CONFIG.states[ring]; }
@@ -271,6 +408,7 @@ function spikeActive(s){ return s.set === curState().plat; }
 function loadLevel(i){
   levelIdx = i; level = LEVELS[i];
   ring = 0; tutIdx = 0;
+  levelShifts = 0; levelTime = 0; levelDeathsStart = deaths;
   player.x = level.spawn.x; player.y = level.spawn.y;
   player.vx = 0; player.vy = 0; player.grounded = false;
   camX = 0; particles = [];
@@ -282,19 +420,25 @@ function respawn(){
 }
 
 let denyT = 0; // ratchet deny feedback timer
+function ratchetZones(){
+  const z = [];
+  if (level.ratchet) z.push(level.ratchet);
+  if (level.ratchet2) z.push(level.ratchet2);
+  return z;
+}
 function inRatchet(){
-  const r = level.ratchet;
-  return r && player.x >= r.x0 && player.x <= r.x1;
+  return ratchetZones().some(r => player.x >= r.x0 && player.x <= r.x1);
 }
 /* THE single entry point that may change the world state.
    Ratchet zones are the one exception to free shifting: inside them the
    ring only moves forward — backshift is denied (with feedback). */
 function shift(dir){
   if (dir < 0 && inRatchet()){
-    denyT = 1.0; shake = Math.max(shake, 4); tone(140, 90, 0.15, "sawtooth", 0.06);
+    denyT = 1.0; shake = Math.max(shake, 4); sfx("deny");
     return;
   }
   ring = (ring + dir + CONFIG.states.length) % CONFIG.states.length;
+  runShifts++; levelShifts++;
   flash = 0.35; shake = Math.max(shake, 3);
   burst(player.x + 15, player.y + 15, curState().plat === "A" ? curState().platA : curState().platB);
   sfx("shift", dir);
@@ -312,7 +456,8 @@ function tone(f0, f1, dur, type, vol){
   o.connect(g); g.connect(AC.destination); o.start(t); o.stop(t + dur);
 }
 function sfx(kind, dir){
-  if (!AC) return;
+  if (!AC || !sfxOn) return;
+  if (kind === "deny")  { tone(140, 90, 0.15, "sawtooth", 0.06); }
   if (kind === "shift") { tone(dir > 0 ? 320 : 520, dir > 0 ? 640 : 260, 0.12, "square", 0.05); }
   if (kind === "die")   { tone(300, 60, 0.25, "sawtooth", 0.07); }
   if (kind === "goal")  { tone(523, 523, 0.09, "square", 0.05); setTimeout(()=>tone(659,659,0.09,"square",0.05), 90); setTimeout(()=>tone(784,784,0.16,"square",0.05), 180); }
@@ -351,6 +496,7 @@ const Music = (() => {
   return {
     start(){ if (started || !AC) return; started = true; step = 0; nextT = AC.currentTime + 0.06; timer = setInterval(schedule, 90); },
     toggle(){ muted = !muted; return muted; },
+    setMuted(m){ muted = !!m; },
     get muted(){ return muted; }
   };
 })();
@@ -358,7 +504,8 @@ const Music = (() => {
 /* ---------------- input ---------------- */
 function pressShift(dir){
   audio();
-  if (screen === "title") { screen = "play"; loadLevel(0); runTime = 0; deaths = 0; Music.start(); return; }
+  if (screen === "title" && titlePanel) { titlePanel = null; return; }
+  if (screen === "title") { runTime = 0; deaths = 0; runShifts = 0; achToast = ""; screen = "play"; loadLevel(0); Music.start(); return; }
   if (screen === "win")   { screen = "title"; return; }
   if (screen !== "play") return;
   shift(dir);
@@ -367,8 +514,9 @@ window.addEventListener("keydown", (e) => {
   if (e.code === "ShiftLeft")  { if (!e.repeat) pressShift(1);  e.preventDefault(); }
   if (e.code === "ShiftRight") { if (!e.repeat) pressShift(-1); e.preventDefault(); }
   if (e.code === "KeyR" && screen === "play") { deaths++; respawn(); }
-  if (e.code === "KeyM") { audio(); Music.toggle(); }
-  if (screen === "title" && /^Digit[1-7]$/.test(e.code)) { const i = +e.code.slice(5) - 1; if (i <= unlocked) startLevel(i); }
+  if (e.code === "KeyM") { audio(); settings.music = !Music.toggle(); saveSettings(); }
+  if (e.code === "Escape" && screen === "title") titlePanel = null;
+  if (screen === "title" && /^Digit\d$/.test(e.code)) { const i = e.code === "Digit0" ? 9 : +e.code.slice(5) - 1; if (i < LEVELS.length && i <= unlocked) startLevel(i); }
 });
 let padL = null, padR = null; // touch/mouse pads drawn on canvas, hit-tested below
 cv.addEventListener("pointerdown", (e) => {
@@ -376,6 +524,16 @@ cv.addEventListener("pointerdown", (e) => {
   const x = (e.clientX - r.left) * (CONFIG.viewW / r.width);
   const y = (e.clientY - r.top)  * (CONFIG.viewH / r.height);
   if (screen === "title"){
+    if (titlePanel) { titlePanel = null; return; }
+    for (const b of uiBtns){
+      if (x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h){
+        if (b.id === "music") { audio(); settings.music = !Music.toggle(); saveSettings(); }
+        else if (b.id === "sfx") { sfxOn = !sfxOn; settings.sfx = sfxOn; saveSettings(); if (sfxOn) sfx("goal"); }
+        else if (b.id === "board") titlePanel = "board";
+        else if (b.id === "ach") titlePanel = "ach";
+        return;
+      }
+    }
     for (const b of titleBtns){
       if (x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h){
         if (b.i <= unlocked) startLevel(b.i);
@@ -399,9 +557,9 @@ function burst(x, y, color){
 function overlaps(a, b){ return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y; }
 
 function step(dt){
-  if (screen === "clear") { clearTimer -= dt; if (clearTimer <= 0) { if (levelIdx + 1 > unlocked) { unlocked = Math.min(levelIdx + 1, LEVELS.length - 1); saveUnlock(); } if (levelIdx + 1 < LEVELS.length) { loadLevel(levelIdx + 1); screen = "play"; } else screen = "win"; } }
+  if (screen === "clear") { clearTimer -= dt; if (clearTimer <= 0) { if (levelIdx + 1 > unlocked) { unlocked = Math.min(levelIdx + 1, LEVELS.length - 1); saveUnlock(); } if (levelIdx + 1 < LEVELS.length) { loadLevel(levelIdx + 1); screen = "play"; } else { commitRun(); screen = "win"; } } }
   if (screen !== "play") return;
-  runTime += dt;
+  runTime += dt; levelTime += dt;
   const st = curState(), S = CONFIG.playerSize, PH = 22;
   player.vx = CONFIG.runSpeed;
   player.vy += CONFIG.gravity * st.grav * dt;
@@ -436,6 +594,7 @@ function step(dt){
   // goal (zone box; works for floor flags and ceiling flags)
   const g = level.goal;
   if (overlaps({ x: player.x, y: player.y, w: S, h: S }, g)){
+    commitLevel();
     sfx("goal"); screen = "clear"; clearTimer = 1.1;
   }
   tutAdvance();
@@ -466,8 +625,7 @@ function draw(){
   ctx.fillStyle = st.far;
   for (let i = 0; i < 14; i++){ const bx = i * 260 + 40; ctx.fillRect(bx, 300 - (i % 3) * 40, 90, 260); }
   // ratchet zone stripes
-  if (level.ratchet){
-    const r = level.ratchet;
+  for (const r of ratchetZones()){
     ctx.fillStyle = "rgba(255,92,92,0.06)"; ctx.fillRect(r.x0, 0, r.x1 - r.x0, CONFIG.viewH);
     ctx.strokeStyle = "rgba(255,92,92,0.35)"; ctx.lineWidth = 2; ctx.setLineDash([10, 8]);
     ctx.beginPath(); ctx.moveTo(r.x0, 0); ctx.lineTo(r.x0, CONFIG.viewH); ctx.stroke(); ctx.setLineDash([]);
@@ -525,7 +683,7 @@ function draw(){
 
   if (screen === "play" || screen === "clear") drawHUD();
   if (screen === "title") drawTitle();
-  if (screen === "clear") centerText("过关！", "继续移位…", "#51cf66");
+  if (screen === "clear") centerText("过关！", achToast, "#51cf66");
   if (screen === "win") drawWin();
   // touch pads
   padL = { x: 16, y: H - 92, w: 196, h: 74 }; padR = { x: W - 212, y: H - 92, w: 196, h: 74 };
@@ -599,46 +757,99 @@ function drawTitle(){
   ctx.fillStyle = "rgba(5,6,16,0.78)"; ctx.fillRect(0, 0, W, H);
   ctx.textAlign = "center";
   ctx.fillStyle = "#ffd166"; ctx.font = "bold 76px system-ui";
-  ctx.fillText("四相移位", W / 2, 156);
-  ctx.fillStyle = "#dfe3ee"; ctx.font = "21px system-ui";
-  ctx.fillText("你只管跑，世界来移位。", W / 2, 204);
-  ctx.fillStyle = "#8d99ae"; ctx.font = "16px system-ui";
-  ctx.fillText("共 7 关 · 约 5 分钟 · 只用两个按钮", W / 2, 234);
-  ctx.font = "19px system-ui"; ctx.fillStyle = "#aeb6cc";
-  ctx.fillText("右侧「前移」— 世界向前移一格", W / 2, 274);
-  ctx.fillText("左侧「后移」— 世界向后移一格", W / 2, 304);
-  ctx.fillText("虚线平台存在于另一个状态，移位能让它变实。", W / 2, 334);
-  ctx.fillStyle = "#8d99ae"; ctx.font = "15px system-ui";
-  ctx.fillText("选关 · 打通一关解锁下一关", W / 2, 372);
-  // 选关按钮（命中区与 pointerdown 共用 titleBtns）
+  ctx.fillText("四相移位", W / 2, 168);
+  // 选关按钮，两行 × 5（命中区与 pointerdown 共用 titleBtns）
   titleBtns = [];
-  const bw = 76, bh = 48, gap = 10, totalW = bw * LEVELS.length + gap * (LEVELS.length - 1);
-  const bx0 = (W - totalW) / 2;
+  const bw = 76, bh = 48, gap = 10, per = 5;
+  const rowW = bw * per + gap * (per - 1), bx0 = (W - rowW) / 2;
   for (let i = 0; i < LEVELS.length; i++){
-    const bx = bx0 + i * (bw + gap), by = 386;
+    const bx = bx0 + (i % per) * (bw + gap), by = 252 + Math.floor(i / per) * 62;
     titleBtns.push({ x: bx, y: by, w: bw, h: bh, i });
     const open = i <= unlocked;
-    ctx.fillStyle = open ? "#ffd166" : "rgba(255,255,255,0.12)";
+    ctx.fillStyle = open ? "#ffd166" : "rgba(255,255,255,0.10)";
     rr(bx, by, bw, bh, 10); ctx.fill();
     ctx.fillStyle = open ? "#14142b" : "#8d99ae"; ctx.font = "bold 20px system-ui";
     ctx.fillText(open ? String(i + 1) : "🔒", bx + bw / 2, by + 32);
   }
-  ctx.fillStyle = "#51cf66"; ctx.font = "bold 22px system-ui";
-  ctx.fillText("点任意处，从第 1 关开始", W / 2, 478);
-  ctx.fillStyle = "#8d99ae"; ctx.font = "14px system-ui";
-  ctx.fillText("键盘：左 Shift 前移 · 右 Shift 后移 · R 重开本关 · M 音乐开关", W / 2, 508);
+  ctx.fillStyle = "#aeb6cc"; ctx.font = "16px system-ui";
+  ctx.fillText("点任意处开始", W / 2, 448);
+  // 底部一行：音乐/音效开关与排行榜/成就入口（uiBtns 与 pointerdown 共用）
+  uiBtns = [];
+  const items = [
+    { id: "music", label: "音乐 " + (settings.music ? "开" : "关"), x: 150 },
+    { id: "sfx",   label: "音效 " + (sfxOn ? "开" : "关"),          x: 330 },
+    { id: "board", label: "排行榜",                                 x: 630 },
+    { id: "ach",   label: "成就",                                   x: 800 }
+  ];
+  ctx.font = "15px system-ui";
+  for (const it of items){
+    uiBtns.push({ x: it.x - 70, y: 484, w: 140, h: 38, id: it.id });
+    ctx.fillStyle = "#8d99ae";
+    ctx.fillText(it.label, it.x, 508);
+  }
+  if (titlePanel === "board") drawBoard();
+  if (titlePanel === "ach") drawAchPanel();
+}
+function fmtT(v){ return v === null || v === undefined ? "—" : v.toFixed(1) + "s"; }
+function panelBox(){
+  ctx.fillStyle = "rgba(5,6,16,0.95)"; rr(110, 46, 740, 448, 14); ctx.fill();
+  ctx.strokeStyle = "rgba(255,255,255,0.18)"; ctx.lineWidth = 1; rr(110, 46, 740, 448, 14); ctx.stroke();
+}
+function drawBoard(){
+  panelBox();
+  ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.font = "bold 20px system-ui";
+  ctx.fillText("排行榜", 480, 92);
+  ctx.font = "14px system-ui"; ctx.fillStyle = "#8d99ae";
+  ctx.textAlign = "left";   ctx.fillText("关卡", 170, 128);
+  ctx.textAlign = "center"; ctx.fillText("最速", 470, 128); ctx.fillText("最少移位", 690, 128);
+  ctx.font = "15px system-ui";
+  for (let i = 0; i < LEVELS.length; i++){
+    const y = 160 + i * 27, rec = records.lv[i];
+    ctx.textAlign = "left"; ctx.fillStyle = "#dfe3ee";
+    ctx.fillText("第 " + (i + 1) + " 关", 170, y);
+    ctx.textAlign = "center"; ctx.fillStyle = "#fff";
+    ctx.fillText(fmtT(rec ? rec.t : null), 470, y);
+    ctx.fillText(rec && rec.s !== null && rec.s !== undefined ? String(rec.s) : "—", 690, y);
+  }
+  const y = 160 + LEVELS.length * 27 + 8;
+  ctx.textAlign = "left"; ctx.fillStyle = "#ffd166";
+  ctx.fillText("全程", 170, y);
+  ctx.textAlign = "center";
+  ctx.fillText(fmtT(records.run.t), 470, y);
+  ctx.fillText(records.run.s === null || records.run.s === undefined ? "—" : String(records.run.s), 690, y);
+  ctx.fillStyle = "#8d99ae"; ctx.font = "13px system-ui";
+  ctx.fillText("点任意处关闭", 480, 478);
+}
+function drawAchPanel(){
+  panelBox();
+  ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.font = "bold 20px system-ui";
+  ctx.fillText("成就", 480, 92);
+  ACH.forEach((a, i) => {
+    const y = 150 + i * 52, got = achDone.includes(a.id);
+    ctx.textAlign = "left"; ctx.fillStyle = got ? "#ffd166" : "#dfe3ee"; ctx.font = "16px system-ui";
+    ctx.fillText(a.name, 190, y);
+    ctx.fillStyle = "#8d99ae"; ctx.font = "14px system-ui";
+    ctx.fillText(a.desc, 190, y + 22);
+    ctx.textAlign = "right"; ctx.fillStyle = got ? "#51cf66" : "#5b6478"; ctx.font = "16px system-ui";
+    ctx.fillText(got ? "已达成" : "未达成", 770, y);
+  });
+  ctx.textAlign = "center"; ctx.fillStyle = "#8d99ae"; ctx.font = "13px system-ui";
+  ctx.fillText("点任意处关闭", 480, 478);
 }
 function drawWin(){
   const W = CONFIG.viewW, H = CONFIG.viewH;
   ctx.fillStyle = "rgba(5,6,16,0.8)"; ctx.fillRect(0, 0, W, H);
   ctx.textAlign = "center";
   ctx.fillStyle = "#51cf66"; ctx.font = "bold 52px system-ui";
-  ctx.fillText("全部移位完成！", W / 2, 210);
-  ctx.fillStyle = "#dfe3ee"; ctx.font = "21px system-ui";
-  ctx.fillText("用时 " + runTime.toFixed(1) + " 秒 · 死亡 " + deaths + " 次", W / 2, 262);
-  ctx.fillStyle = "#aeb6cc"; ctx.font = "17px system-ui";
-  ctx.fillText("《Only SHIFT》中文版 · Game Off 2026 参赛作品", W / 2, 300);
-  ctx.fillText("点任意处回到标题", W / 2, 356);
+  ctx.fillText("全部移位完成", W / 2, 216);
+  ctx.fillStyle = "#dfe3ee"; ctx.font = "20px system-ui";
+  ctx.fillText("用时 " + runTime.toFixed(1) + " 秒 · 移位 " + runShifts + " 次 · 死亡 " + deaths + " 次", W / 2, 268);
+  if (achToast){
+    ctx.fillStyle = "#ffd166"; ctx.font = "16px system-ui";
+    ctx.fillText(achToast, W / 2, 306);
+  }
+  ctx.fillStyle = "#8d99ae"; ctx.font = "15px system-ui";
+  ctx.fillText("点任意处回到标题", W / 2, 362);
 }
 
 /* ---------------- loop ---------------- */
@@ -648,6 +859,7 @@ function frame(now){
   step(dt); draw();
   requestAnimationFrame(frame);
 }
+if (!settings.music) Music.setMuted(true);
 loadLevel(0);
 requestAnimationFrame(frame);
 
@@ -656,6 +868,9 @@ window.__game = {
   get screen(){ return screen; }, get ring(){ return ring; },
   get level(){ return levelIdx; }, get deaths(){ return deaths; },
   get unlocked(){ return unlocked; },
+  get runShifts(){ return runShifts; },
+  get records(){ return records; },
+  get ach(){ return achDone.slice(); },
   get player(){ return { x: player.x, y: player.y, grounded: player.grounded }; },
   get tut(){ return { idx: tutIdx, total: tutSteps().length, current: tutCurrent() ? tutCurrent().text : null }; },
   pressShift, loadLevel: (i) => { loadLevel(i); screen = "play"; }
