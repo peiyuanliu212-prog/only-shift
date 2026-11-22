@@ -407,7 +407,7 @@ function spikeActive(s){ return s.set === curState().plat; }
 
 function loadLevel(i){
   levelIdx = i; level = LEVELS[i];
-  ring = 0; tutIdx = 0;
+  ring = 0; tutIdx = 0; shiftCD = 0;
   levelShifts = 0; levelTime = 0; levelDeathsStart = deaths;
   player.x = level.spawn.x; player.y = level.spawn.y;
   player.vx = 0; player.vy = 0; player.grounded = false;
@@ -416,10 +416,11 @@ function loadLevel(i){
 function respawn(){
   player.x = level.spawn.x; player.y = level.spawn.y;
   player.vx = 0; player.vy = 0;
-  ring = 0;
+  ring = 0; shiftCD = 0;
 }
 
 let denyT = 0; // ratchet deny feedback timer
+let shiftCD = 0; // 移位冷却（秒）：防连切悬浮/穿刺——切档后 0.4s 内再切无效
 function ratchetZones(){
   const z = [];
   if (level.ratchet) z.push(level.ratchet);
@@ -433,11 +434,13 @@ function inRatchet(){
    Ratchet zones are the one exception to free shifting: inside them the
    ring only moves forward — backshift is denied (with feedback). */
 function shift(dir){
+  if (shiftCD > 0) return;
   if (dir < 0 && inRatchet()){
     denyT = 1.0; shake = Math.max(shake, 4); sfx("deny");
     return;
   }
   ring = (ring + dir + CONFIG.states.length) % CONFIG.states.length;
+  shiftCD = 0.4;
   runShifts++; levelShifts++;
   flash = 0.35; shake = Math.max(shake, 3);
   burst(player.x + 15, player.y + 15, curState().plat === "A" ? curState().platA : curState().platB);
@@ -560,6 +563,7 @@ function step(dt){
   if (screen === "clear") { clearTimer -= dt; if (clearTimer <= 0) { if (levelIdx + 1 > unlocked) { unlocked = Math.min(levelIdx + 1, LEVELS.length - 1); saveUnlock(); } if (levelIdx + 1 < LEVELS.length) { loadLevel(levelIdx + 1); screen = "play"; } else { commitRun(); screen = "win"; } } }
   if (screen !== "play") return;
   runTime += dt; levelTime += dt;
+  if (shiftCD > 0) shiftCD -= dt;
   const st = curState(), S = CONFIG.playerSize, PH = 22;
   player.vx = CONFIG.runSpeed;
   player.vy += CONFIG.gravity * st.grav * dt;
