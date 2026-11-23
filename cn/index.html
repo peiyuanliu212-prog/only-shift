@@ -83,314 +83,433 @@ const LEVELS = [
     goal: { x: 3050, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 3 关 · 完整循环",
-    width: 3400, spawn: { x: 60, y: 400 },
-    hint: "",
-    platforms: [
-      { x:-40,  y:460, w:540,  set:"AB" },
-      { x:420,  y:96,  w:680,  set:"B"  },
-      { x:900,  y:96,  w:800,  set:"A"  },
-      { x:1600, y:460, w:500,  set:"AB" },
-      { x:2100, y:460, w:250,  set:"A"  },
-      { x:2350, y:460, w:450,  set:"AB" },
-      { x:2700, y:96,  w:640,  set:"B"  }
-    ],
-    spikes: [],
-    goal: { x: 3150, y: 96, w: 44, h: 70, surf: 118, ceil: true }
-  },
-  {
-    name: "第 4 关 · 棘轮",
-    width: 3400, spawn: { x: 60, y: 400 },
-    hint: "",
-    ratchet: { x0: 300, x1: 2950 },
-    platforms: [
-      { x:-40,  y:460, w:640,  set:"AB" },
-      { x:600,  y:460, w:250,  set:"B"  },
-      { x:850,  y:460, w:550,  set:"AB" },
-      { x:-40,  y:36,  w:3480, set:"AB" },
-      { x:1900, y:460, w:250,  set:"A"  },
-      { x:2150, y:460, w:450,  set:"AB" },
-      { x:2600, y:460, w:250,  set:"B"  },
-      { x:2850, y:460, w:600,  set:"AB" }
-    ],
-    spikes: [
-      { x:1050, y:460, set:"A" },
-      { x:1600, y:58,  set:"B", hang:true }
-    ],
-    goal: { x: 3150, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 5 关 · 错峰",
-    width: 3700, spawn: { x: 60, y: 400 },
-    hint: "",
-    platforms: [
-      { x:-40,  y:460, w:700,  set:"AB" },
-      { x:540,  y:96,  w:820,  set:"B"  },
-      { x:1260, y:460, w:820,  set:"AB" },
-      { x:1980, y:96,  w:820,  set:"A"  },
-      { x:2700, y:460, w:900,  set:"AB" }
-    ],
-    spikes: [
-      { x:1500, y:460, set:"A" },
-      { x:1800, y:460, set:"B" },
-      { x:2350, y:120, set:"B", hang:true }
-    ],
-    goal: { x: 3380, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 6 关 · 尖刺交织",
-    width: 3500, spawn: { x: 60, y: 400 },
-    hint: "",
-    platforms: [
-      { x:-40,  y:460, w:740,  set:"AB" },
-      { x:700,  y:460, w:250,  set:"B"  },
-      { x:950,  y:460, w:700,  set:"AB" },
-      { x:1550, y:96,  w:700,  set:"A"  },
-      { x:1450, y:96,  w:1400, set:"B"  },
-      { x:2750, y:460, w:700,  set:"AB" }
-    ],
-    spikes: [
-      { x:300,  y:460, set:"A" },
-      { x:520,  y:460, set:"B" },
-      { x:1150, y:460, set:"B" },
-      { x:1420, y:460, set:"A" },
-      { x:1850, y:120, set:"B", hang:true },
-      { x:2500, y:120, set:"A", hang:true },
-      { x:2950, y:460, set:"A" }
-    ],
-    goal: { x: 3280, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 7 关 · 浮岛",
-    width: 2500, spawn: { x: 60, y: 400 },
-    hint: "",
-    platforms: [
-      { x:-40,  y:460, w:540,  set:"AB" },
-      { x:550,  y:200, w:300,  set:"AB" },
-      { x:900,  y:340, w:350,  set:"AB" },
-      { x:1350, y:200, w:300,  set:"AB" },
-      { x:1750, y:460, w:700,  set:"AB" }
-    ],
-    spikes: [
-      { x:1050, y:340, set:"A" },
-      { x:1500, y:222, set:"B", hang:true },
-      { x:1950, y:460, set:"A" }
-    ],
-    goal: { x: 2250, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 8 关 · 双棘轮",
-    width: 3800, spawn: { x: 60, y: 400 },
-    hint: "",
-    ratchet: { x0: 300, x1: 1500 },
-    ratchet2: { x0: 2100, x1: 3400 },
-    platforms: [
-      { x:-40,  y:460, w:640,  set:"AB" },
-      { x:600,  y:460, w:260,  set:"B"  },
-      { x:860,  y:460, w:560,  set:"AB" },
-      { x:-40,  y:36,  w:3880, set:"AB" },
-      { x:1820, y:460, w:340,  set:"A"  },
-      { x:2160, y:460, w:560,  set:"AB" },
-      { x:2720, y:460, w:260,  set:"B"  },
-      { x:2980, y:460, w:760,  set:"AB" }
-    ],
-    spikes: [
-      { x:1050, y:460, set:"A" },
-      { x:2400, y:460, set:"B" }
-    ],
-    goal: { x: 3520, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 9 关 · 试炼",
-    width: 4100, spawn: { x: 60, y: 400 },
-    hint: "",
-    ratchet: { x0: 2500, x1: 3650 },
-    platforms: [
-      { x:-40,  y:460, w:590,  set:"AB" },
-      { x:550,  y:460, w:250,  set:"B"  },
-      { x:800,  y:460, w:500,  set:"AB" },
-      { x:1200, y:96,  w:700,  set:"B"  },
-      { x:1700, y:96,  w:800,  set:"A"  },
-      { x:2450, y:460, w:450,  set:"AB" },
-      { x:2900, y:460, w:250,  set:"A"  },
-      { x:3150, y:460, w:150,  set:"AB" },
-      { x:3300, y:460, w:250,  set:"B"  },
-      { x:3550, y:460, w:600,  set:"AB" }
-    ],
-    spikes: [
-      { x:1050, y:460, set:"A" },
-      { x:2150, y:120, set:"B", hang:true },
-      { x:3180, y:460, set:"A" }
-    ],
-    goal: { x: 3850, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 10 关 · 四相终局",
-    width: 4700, spawn: { x: 60, y: 400 },
-    hint: "",
-    ratchet: { x0: 3150, x1: 4450 },
-    platforms: [
-      { x:-40,  y:460, w:600,  set:"AB" },
-      { x:560,  y:460, w:260,  set:"B"  },
-      { x:820,  y:460, w:480,  set:"AB" },
-      { x:1200, y:96,  w:760,  set:"B"  },
-      { x:1800, y:96,  w:700,  set:"A"  },
-      { x:2400, y:460, w:850,  set:"AB" },
-      { x:-40,  y:36,  w:4680, set:"AB" },
-      { x:3250, y:460, w:260,  set:"B"  },
-      { x:3510, y:460, w:560,  set:"AB" },
-      { x:4200, y:460, w:480,  set:"AB" }
-    ],
-    spikes: [
-      { x:1050, y:460, set:"A" },
-      { x:2150, y:120, set:"B", hang:true },
-      { x:2750, y:460, set:"B" },
-      { x:2950, y:460, set:"A" },
-      { x:3750, y:460, set:"A" }
-    ],
-    goal: { x: 4450, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 11 关 · 连珠",
-    width: 4960, spawn: { x: 60, y: 400 },
+    name: "第 3 关 · 错峰",
+    width: 3680, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:520, set:"AB" },
-      { x:480, y:460, w:1620, set:"AB" },
-      { x:2080, y:460, w:260, set:"AB" },
-      { x:2340, y:96, w:700, set:"B" },
-      { x:2320, y:460, w:720, set:"AB" },
-      { x:3020, y:460, w:220, set:"AB" },
-      { x:3220, y:460, w:1120, set:"AB" },
-      { x:4320, y:460, w:520, set:"AB" }
+      { x:480, y:460, w:1740, set:"AB" },
+      { x:2200, y:460, w:220, set:"AB" },
+      { x:2420, y:96, w:640, set:"B" },
+      { x:2400, y:460, w:660, set:"AB" },
+      { x:3040, y:460, w:520, set:"AB" }
     ],
     spikes: [
       { x:920, y:460, set:"A" },
-      { x:1340, y:460, set:"B" },
-      { x:1760, y:460, set:"A" },
-      { x:3620, y:460, set:"B" },
-      { x:4000, y:460, set:"A" }
+      { x:1400, y:460, set:"B" },
+      { x:1880, y:460, set:"A" }
     ],
-    goal: { x: 4640, y: 368, w: 44, h: 92, surf: 460 }
+    goal: { x: 3360, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 12 关 · 双生",
-    width: 4550, spawn: { x: 60, y: 400 },
+    name: "第 4 关 · 棘轮",
+    width: 5350, spawn: { x: 60, y: 400 },
     hint: "",
+    ratchet: { x0: 300, x1: 3300 },
     platforms: [
-      { x:-20, y:460, w:440, set:"AB" },
-      { x:420, y:96, w:620, set:"A" },
-      { x:400, y:460, w:640, set:"AB" },
-      { x:1020, y:460, w:260, set:"AB" },
-      { x:1260, y:460, w:1600, set:"AB" },
-      { x:2840, y:460, w:60, set:"AB" },
-      { x:2910, y:200, w:300, set:"AB" },
-      { x:3270, y:340, w:320, set:"AB" },
-      { x:3630, y:460, w:300, set:"AB" },
-      { x:3910, y:460, w:520, set:"AB" }
+      { x:-40, y:36, w:3300, set:"AB" },
+      { x:-20, y:460, w:620, set:"AB" },
+      { x:600, y:460, w:260, set:"B" },
+      { x:860, y:460, w:560, set:"AB" },
+      { x:1820, y:460, w:340, set:"A" },
+      { x:2160, y:460, w:560, set:"AB" },
+      { x:2720, y:460, w:260, set:"B" },
+      { x:2980, y:460, w:580, set:"AB" },
+      { x:3540, y:460, w:1190, set:"AB" },
+      { x:4710, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:720, y:120, set:"B", hang:true },
-      { x:1680, y:460, set:"B" },
-      { x:2100, y:460, set:"A" },
-      { x:2520, y:460, set:"B" }
+      { x:1050, y:460, set:"A" },
+      { x:2400, y:460, set:"B" },
+      { x:3960, y:460, set:"B" },
+      { x:4390, y:460, set:"A" }
     ],
-    goal: { x: 4230, y: 368, w: 44, h: 92, surf: 460 }
+    goal: { x: 5030, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 13 关 · 回廊",
-    width: 4340, spawn: { x: 60, y: 400 },
+    name: "第 5 关 · 回廊",
+    width: 4860, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
       { x:420, y:96, w:560, set:"B" },
       { x:740, y:96, w:800, set:"A" },
       { x:400, y:460, w:1140, set:"AB" },
-      { x:1520, y:460, w:260, set:"AB" },
-      { x:1760, y:460, w:1960, set:"AB" },
-      { x:3700, y:460, w:520, set:"AB" }
+      { x:1520, y:460, w:240, set:"AB" },
+      { x:1740, y:460, w:1620, set:"AB" },
+      { x:3360, y:96, w:600, set:"B" },
+      { x:3340, y:460, w:260, set:"AB" },
+      { x:3980, y:460, w:260, set:"AB" },
+      { x:4220, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:2180, y:460, set:"A" },
-      { x:2580, y:460, set:"B" },
-      { x:2980, y:460, set:"A" },
-      { x:3380, y:460, set:"B" }
+      { x:2160, y:460, set:"A" },
+      { x:2590, y:460, set:"B" },
+      { x:3020, y:460, set:"A" },
+      { x:3660, y:120, set:"A", hang:true }
     ],
-    goal: { x: 4020, y: 368, w: 44, h: 92, surf: 460 }
+    goal: { x: 4540, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 14 关 · 千针",
-    width: 4160, spawn: { x: 60, y: 400 },
+    name: "第 6 关 · 交织",
+    width: 5690, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:2260, set:"AB" },
-      { x:2640, y:460, w:220, set:"AB" },
-      { x:2860, y:96, w:680, set:"B" },
-      { x:2840, y:460, w:700, set:"AB" },
-      { x:3520, y:460, w:520, set:"AB" }
+      { x:400, y:460, w:2580, set:"AB" },
+      { x:2960, y:460, w:220, set:"AB" },
+      { x:3180, y:96, w:620, set:"B" },
+      { x:3160, y:460, w:640, set:"AB" },
+      { x:3780, y:460, w:280, set:"AB" },
+      { x:4040, y:460, w:60, set:"AB" },
+      { x:4110, y:200, w:280, set:"AB" },
+      { x:4450, y:340, w:280, set:"AB" },
+      { x:4770, y:460, w:300, set:"AB" },
+      { x:5050, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:800, y:460, set:"A" },
-      { x:1180, y:460, set:"B" },
-      { x:1560, y:460, set:"A" },
-      { x:1940, y:460, set:"B" },
-      { x:2320, y:460, set:"A" },
-      { x:3200, y:120, set:"A", hang:true }
+      { x:840, y:460, set:"A" },
+      { x:1290, y:460, set:"B" },
+      { x:1740, y:460, set:"A" },
+      { x:2190, y:460, set:"B" },
+      { x:2640, y:460, set:"A" },
+      { x:3480, y:120, set:"A", hang:true }
     ],
-    goal: { x: 3840, y: 368, w: 44, h: 92, surf: 460 }
+    goal: { x: 5370, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 15 关 · 绝壁",
-    width: 4330, spawn: { x: 60, y: 400 },
-    hint: "",
-    platforms: [
-      { x:-20, y:460, w:480, set:"AB" },
-      { x:460, y:96, w:900, set:"B" },
-      { x:440, y:460, w:260, set:"AB" },
-      { x:1380, y:460, w:260, set:"AB" },
-      { x:1620, y:460, w:1930, set:"AB" },
-      { x:3530, y:460, w:180, set:"AB" },
-      { x:3690, y:460, w:520, set:"AB" }
-    ],
-    spikes: [
-      { x:760, y:120, set:"A", hang:true },
-      { x:1080, y:120, set:"A", hang:true },
-      { x:2040, y:460, set:"B" },
-      { x:2430, y:460, set:"A" },
-      { x:2820, y:460, set:"B" },
-      { x:3210, y:460, set:"A" }
-    ],
-    goal: { x: 4010, y: 368, w: 44, h: 92, surf: 460 }
-  },
-  {
-    name: "第 16 关 · 镜面",
-    width: 4625, spawn: { x: 60, y: 400 },
+    name: "第 7 关 · 浮岛",
+    width: 5235, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
       { x:400, y:460, w:60, set:"AB" },
-      { x:470, y:200, w:290, set:"AB" },
-      { x:820, y:340, w:300, set:"AB" },
-      { x:1225, y:200, w:290, set:"AB" },
-      { x:1545, y:460, w:300, set:"AB" },
-      { x:1825, y:460, w:220, set:"AB" },
-      { x:2025, y:460, w:1140, set:"AB" },
-      { x:3165, y:96, w:560, set:"A" },
-      { x:3145, y:460, w:260, set:"AB" },
-      { x:3745, y:460, w:260, set:"AB" },
-      { x:3985, y:460, w:520, set:"AB" }
+      { x:470, y:200, w:300, set:"AB" },
+      { x:830, y:340, w:310, set:"AB" },
+      { x:1245, y:200, w:300, set:"AB" },
+      { x:1605, y:340, w:290, set:"AB" },
+      { x:1935, y:460, w:300, set:"AB" },
+      { x:2215, y:460, w:220, set:"AB" },
+      { x:2415, y:460, w:1640, set:"AB" },
+      { x:4055, y:96, w:560, set:"B" },
+      { x:4035, y:460, w:580, set:"AB" },
+      { x:4595, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:970, y:340, set:"B" },
-      { x:2435, y:460, set:"A" },
-      { x:2825, y:460, set:"B" }
+      { x:1395, y:222, set:"A", hang:true },
+      { x:2835, y:460, set:"B" },
+      { x:3275, y:460, set:"A" },
+      { x:3715, y:460, set:"B" }
     ],
-    goal: { x: 4305, y: 368, w: 44, h: 92, surf: 460 }
+    goal: { x: 4915, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 8 关 · 双棘",
+    width: 7600, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 300, x1: 3300 },
+    platforms: [
+      { x:-40, y:36, w:3300, set:"AB" },
+      { x:-20, y:460, w:620, set:"AB" },
+      { x:600, y:460, w:260, set:"B" },
+      { x:860, y:460, w:560, set:"AB" },
+      { x:1820, y:460, w:340, set:"A" },
+      { x:2160, y:460, w:560, set:"AB" },
+      { x:2720, y:460, w:260, set:"B" },
+      { x:2980, y:460, w:580, set:"AB" },
+      { x:3540, y:460, w:1190, set:"AB" },
+      { x:4710, y:460, w:1710, set:"AB" },
+      { x:6420, y:96, w:560, set:"A" },
+      { x:6400, y:460, w:580, set:"AB" },
+      { x:6960, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:1050, y:460, set:"A" },
+      { x:2400, y:460, set:"B" },
+      { x:3960, y:460, set:"B" },
+      { x:4390, y:460, set:"A" }
+    ],
+    movers: [
+      { x:5160, y:390, set:"A", axis:"y", dist:70, speed:1.7, phase:-42.891 },
+      { x:5620, y:390, set:"B", axis:"y", dist:70, speed:1.7, phase:-46.901 },
+      { x:6080, y:390, set:"A", axis:"y", dist:70, speed:1.8, phase:-53.998 }
+    ],
+    goal: { x: 7280, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 9 关 · 巡针",
+    width: 6970, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:480, set:"AB" },
+      { x:440, y:460, w:2200, set:"AB" },
+      { x:2620, y:460, w:220, set:"AB" },
+      { x:2820, y:460, w:1620, set:"AB" },
+      { x:4440, y:96, w:640, set:"B" },
+      { x:4420, y:460, w:660, set:"AB" },
+      { x:5060, y:460, w:280, set:"AB" },
+      { x:5320, y:460, w:60, set:"AB" },
+      { x:5390, y:200, w:280, set:"AB" },
+      { x:5730, y:340, w:280, set:"AB" },
+      { x:6050, y:460, w:300, set:"AB" },
+      { x:6330, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:3240, y:460, set:"B" },
+      { x:3670, y:460, set:"A" },
+      { x:4100, y:460, set:"B" }
+    ],
+    movers: [
+      { x:890, y:390, set:"A", axis:"y", dist:70, speed:1.5, phase:-4.814 },
+      { x:1360, y:390, set:"B", axis:"y", dist:70, speed:1.5, phase:-8.429 },
+      { x:1830, y:390, set:"A", axis:"y", dist:70, speed:1.6, phase:-12.952 },
+      { x:2300, y:390, set:"B", axis:"y", dist:70, speed:1.6, phase:-16.809 },
+      { x:4760, y:165, set:"A", axis:"y", dist:45, speed:1.8, phase:-44.955, hang:true }
+    ],
+    goal: { x: 6650, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 10 关 · 试炼",
+    width: 6960, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2480, set:"AB" },
+      { x:2860, y:460, w:220, set:"AB" },
+      { x:3080, y:96, w:760, set:"B" },
+      { x:3060, y:460, w:260, set:"AB" },
+      { x:3860, y:460, w:260, set:"AB" },
+      { x:4100, y:460, w:60, set:"AB" },
+      { x:4170, y:200, w:270, set:"AB" },
+      { x:4500, y:340, w:270, set:"AB" },
+      { x:4810, y:460, w:300, set:"AB" },
+      { x:5090, y:460, w:1250, set:"AB" },
+      { x:6320, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:840, y:460, set:"A" },
+      { x:1265, y:460, set:"B" },
+      { x:1690, y:460, set:"A" },
+      { x:2115, y:460, set:"B" },
+      { x:2540, y:460, set:"A" },
+      { x:3380, y:120, set:"A", hang:true },
+      { x:3640, y:120, set:"A", hang:true }
+    ],
+    movers: [
+      { x:5540, y:390, set:"B", axis:"y", dist:70, speed:1.9, phase:-51.824 },
+      { x:6000, y:390, set:"A", axis:"y", dist:70, speed:1.9, phase:-56.306 }
+    ],
+    goal: { x: 6640, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 11 关 · 疾风",
+    width: 8390, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2610, set:"AB" },
+      { x:2990, y:460, w:1640, set:"AB" },
+      { x:4610, y:460, w:1260, set:"AB" },
+      { x:5870, y:96, w:640, set:"A" },
+      { x:5850, y:460, w:660, set:"AB" },
+      { x:6490, y:460, w:280, set:"AB" },
+      { x:6750, y:460, w:60, set:"AB" },
+      { x:6820, y:200, w:275, set:"AB" },
+      { x:7155, y:340, w:275, set:"AB" },
+      { x:7470, y:460, w:300, set:"AB" },
+      { x:7750, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:850, y:460, set:"A" },
+      { x:1305, y:460, set:"B" },
+      { x:1760, y:460, set:"A" },
+      { x:2215, y:460, set:"B" },
+      { x:2670, y:460, set:"A" },
+      { x:3410, y:460, set:"B" },
+      { x:3850, y:460, set:"A" },
+      { x:4290, y:460, set:"B" }
+    ],
+    movers: [
+      { x:5060, y:390, set:"A", axis:"y", dist:70, speed:1.8, phase:-39.066 },
+      { x:5530, y:390, set:"B", axis:"y", dist:70, speed:1.8, phase:-43.404 },
+      { x:6190, y:165, set:"B", axis:"y", dist:45, speed:1.9, phase:-55.475, hang:true }
+    ],
+    speeds: [{ x0: 360, x1: 3050, mul: 1.3 }],
+    goal: { x: 8070, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 12 关 · 凝滞",
+    width: 6340, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2060, set:"AB" },
+      { x:2420, y:460, w:220, set:"AB" },
+      { x:2620, y:460, w:1620, set:"AB" },
+      { x:4220, y:460, w:1520, set:"AB" },
+      { x:5700, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:940, y:460, set:"A" },
+      { x:1500, y:460, set:"A" },
+      { x:2060, y:460, set:"A" },
+      { x:3040, y:460, set:"B" },
+      { x:3470, y:460, set:"A" },
+      { x:3900, y:460, set:"B" },
+      { x:4760, y:460, set:"B" },
+      { x:5340, y:460, set:"B" }
+    ],
+    movers: [
+      { x:980, y:390, set:"B", axis:"y", dist:70, speed:1.8, phase:-10.063 },
+      { x:4800, y:390, set:"A", axis:"y", dist:70, speed:1.9, phase:-47.755 }
+    ],
+    locks: [{ x0: 740, x1: 2360 }, { x0: 4560, x1: 5640 }],
+    goal: { x: 6020, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 13 关 · 巡回",
+    width: 7780, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2630, set:"AB" },
+      { x:3030, y:96, w:680, set:"B" },
+      { x:3010, y:460, w:700, set:"AB" },
+      { x:3690, y:460, w:2480, set:"AB" },
+      { x:6150, y:460, w:60, set:"AB" },
+      { x:6220, y:200, w:270, set:"AB" },
+      { x:6550, y:340, w:270, set:"AB" },
+      { x:6860, y:460, w:300, set:"AB" },
+      { x:7140, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:4110, y:460, set:"A" },
+      { x:4540, y:460, set:"B" },
+      { x:4970, y:460, set:"A" },
+      { x:5400, y:460, set:"B" },
+      { x:5830, y:460, set:"A" }
+    ],
+    movers: [
+      { x:850, y:390, set:"A", axis:"y", dist:70, speed:1.9, phase:-6.127 },
+      { x:1310, y:390, set:"B", axis:"y", dist:70, speed:1.9, phase:-10.609 },
+      { x:1770, y:390, set:"A", axis:"y", dist:70, speed:2, phase:-15.968 },
+      { x:2230, y:390, set:"B", axis:"y", dist:70, speed:2, phase:-20.686 },
+      { x:2690, y:390, set:"A", axis:"y", dist:70, speed:2.1, phase:-26.752 },
+      { x:3370, y:165, set:"A", axis:"y", dist:45, speed:2, phase:-35.52, hang:true }
+    ],
+    goal: { x: 7460, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 14 关 · 颠倒",
+    width: 9390, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2110, set:"AB" },
+      { x:2490, y:460, w:1640, set:"AB" },
+      { x:4130, y:96, w:560, set:"A" },
+      { x:4110, y:460, w:260, set:"AB" },
+      { x:4710, y:460, w:260, set:"AB" },
+      { x:4970, y:96, w:560, set:"B" },
+      { x:5290, y:96, w:800, set:"A" },
+      { x:4950, y:460, w:1140, set:"AB" },
+      { x:6070, y:460, w:1710, set:"AB" },
+      { x:7760, y:460, w:60, set:"AB" },
+      { x:7830, y:200, w:270, set:"AB" },
+      { x:8160, y:340, w:270, set:"AB" },
+      { x:8470, y:460, w:300, set:"AB" },
+      { x:8750, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:850, y:460, set:"A" },
+      { x:1290, y:460, set:"B" },
+      { x:1730, y:460, set:"A" },
+      { x:2170, y:460, set:"B" },
+      { x:2910, y:460, set:"B" },
+      { x:3350, y:460, set:"A" },
+      { x:3790, y:460, set:"B" },
+      { x:5250, y:120, set:"A", hang:true }
+    ],
+    movers: [
+      { x:6520, y:390, set:"A", axis:"y", dist:70, speed:2, phase:-64.686 },
+      { x:6980, y:390, set:"B", axis:"y", dist:70, speed:2, phase:-69.404 },
+      { x:7440, y:390, set:"A", axis:"y", dist:70, speed:2.1, phase:-77.906 }
+    ],
+    inverts: [{ x0: 380, x1: 2530 }, { x0: 4930, x1: 6110 }],
+    goal: { x: 9070, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 15 关 · 异变",
+    width: 8800, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:1780, set:"AB" },
+      { x:2140, y:460, w:2480, set:"AB" },
+      { x:4600, y:460, w:1260, set:"AB" },
+      { x:5840, y:460, w:1780, set:"AB" },
+      { x:7600, y:96, w:580, set:"B" },
+      { x:7580, y:460, w:600, set:"AB" },
+      { x:8160, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:1500, y:460, set:"A" },
+      { x:1840, y:460, set:"B" },
+      { x:2560, y:460, set:"A" },
+      { x:2990, y:460, set:"B" },
+      { x:3420, y:460, set:"A" },
+      { x:3850, y:460, set:"B" },
+      { x:4280, y:460, set:"A" },
+      { x:6940, y:460, set:"B" },
+      { x:7280, y:460, set:"A" }
+    ],
+    movers: [
+      { x:5050, y:390, set:"B", axis:"y", dist:70, speed:1.9, phase:-47.05 },
+      { x:5520, y:390, set:"A", axis:"y", dist:70, speed:1.9, phase:-51.629 }
+    ],
+    events: [{ x: 600 }, { x: 6040 }],
+    goal: { x: 8480, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 16 关 · 绝壁",
+    width: 8240, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:60, set:"AB" },
+      { x:470, y:200, w:265, set:"AB" },
+      { x:795, y:340, w:270, set:"AB" },
+      { x:1170, y:200, w:260, set:"AB" },
+      { x:1490, y:340, w:250, set:"AB" },
+      { x:1845, y:200, w:245, set:"AB" },
+      { x:2120, y:460, w:300, set:"AB" },
+      { x:2420, y:96, w:560, set:"A" },
+      { x:2400, y:460, w:260, set:"AB" },
+      { x:3000, y:460, w:260, set:"AB" },
+      { x:3240, y:460, w:2050, set:"AB" },
+      { x:5270, y:460, w:1710, set:"AB" },
+      { x:6980, y:96, w:640, set:"B" },
+      { x:6960, y:460, w:660, set:"AB" },
+      { x:7600, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:930, y:340, set:"B" },
+      { x:3660, y:460, set:"B" },
+      { x:4090, y:460, set:"A" },
+      { x:4520, y:460, set:"B" },
+      { x:4950, y:460, set:"A" }
+    ],
+    movers: [
+      { x:5720, y:390, set:"A", axis:"y", dist:70, speed:2, phase:-56.48 },
+      { x:6180, y:390, set:"B", axis:"y", dist:70, speed:2, phase:-61.198 },
+      { x:6640, y:390, set:"A", axis:"y", dist:70, speed:2.1, phase:-69.291 },
+      { x:7300, y:165, set:"A", axis:"y", dist:45, speed:2.1, phase:-79.54, hang:true }
+    ],
+    goal: { x: 7920, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 17 关 · 连环",
-    width: 5910, spawn: { x: 60, y: 400 },
+    width: 10490, spawn: { x: 60, y: 400 },
     hint: "",
     ratchet: { x0: 300, x1: 3300 },
     platforms: [
@@ -402,400 +521,616 @@ const LEVELS = [
       { x:2160, y:460, w:560, set:"AB" },
       { x:2720, y:460, w:260, set:"B" },
       { x:2980, y:460, w:580, set:"AB" },
-      { x:3540, y:460, w:240, set:"AB" },
-      { x:3760, y:460, w:1530, set:"AB" },
-      { x:5270, y:460, w:520, set:"AB" }
+      { x:3540, y:460, w:1710, set:"AB" },
+      { x:5230, y:460, w:2020, set:"AB" },
+      { x:7250, y:96, w:600, set:"B" },
+      { x:7230, y:460, w:260, set:"AB" },
+      { x:7870, y:460, w:260, set:"AB" },
+      { x:8110, y:460, w:1780, set:"AB" },
+      { x:9850, y:460, w:520, set:"AB" }
     ],
     spikes: [
       { x:1050, y:460, set:"A" },
       { x:2400, y:460, set:"B" },
-      { x:4170, y:460, set:"B" },
-      { x:4560, y:460, set:"A" },
-      { x:4950, y:460, set:"B" }
+      { x:5650, y:460, set:"A" },
+      { x:6070, y:460, set:"B" },
+      { x:6490, y:460, set:"A" },
+      { x:6910, y:460, set:"B" },
+      { x:7550, y:120, set:"A", hang:true },
+      { x:9210, y:460, set:"A" },
+      { x:9550, y:460, set:"B" }
     ],
-    goal: { x: 5590, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:3990, y:390, set:"B", axis:"y", dist:70, speed:1.9, phase:-36.722 },
+      { x:4450, y:390, set:"A", axis:"y", dist:70, speed:1.9, phase:-41.204 },
+      { x:4910, y:390, set:"B", axis:"y", dist:70, speed:2, phase:-48.173 }
+    ],
+    events: [{ x: 8310 }],
+    goal: { x: 10170, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 18 关 · 逆鳞",
-    width: 4660, spawn: { x: 60, y: 400 },
+    width: 8630, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:1740, set:"AB" },
-      { x:2140, y:96, w:620, set:"B" },
-      { x:2120, y:460, w:260, set:"AB" },
-      { x:2780, y:460, w:260, set:"AB" },
-      { x:3020, y:460, w:60, set:"AB" },
-      { x:3090, y:200, w:270, set:"AB" },
-      { x:3420, y:340, w:280, set:"AB" },
-      { x:3740, y:460, w:300, set:"AB" },
-      { x:4020, y:460, w:520, set:"AB" }
+      { x:420, y:96, w:560, set:"B" },
+      { x:740, y:96, w:800, set:"A" },
+      { x:400, y:460, w:1140, set:"AB" },
+      { x:1520, y:460, w:2020, set:"AB" },
+      { x:3520, y:460, w:1710, set:"AB" },
+      { x:5210, y:460, w:60, set:"AB" },
+      { x:5280, y:200, w:260, set:"AB" },
+      { x:5600, y:340, w:260, set:"AB" },
+      { x:5965, y:200, w:255, set:"AB" },
+      { x:6250, y:460, w:300, set:"AB" },
+      { x:6530, y:460, w:1500, set:"AB" },
+      { x:7990, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:780, y:460, set:"A" },
-      { x:1120, y:460, set:"B" },
-      { x:1460, y:460, set:"A" },
-      { x:1800, y:460, set:"B" },
-      { x:2450, y:120, set:"A", hang:true }
+      { x:700, y:120, set:"A", hang:true },
+      { x:1940, y:460, set:"A" },
+      { x:2360, y:460, set:"B" },
+      { x:2780, y:460, set:"A" },
+      { x:3200, y:460, set:"B" },
+      { x:7070, y:460, set:"A" },
+      { x:7630, y:460, set:"A" }
     ],
-    goal: { x: 4340, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:3970, y:390, set:"A", axis:"y", dist:70, speed:2, phase:-38.532 },
+      { x:4430, y:390, set:"B", axis:"y", dist:70, speed:2, phase:-43.25 },
+      { x:4890, y:390, set:"A", axis:"y", dist:70, speed:2.1, phase:-50.445 },
+      { x:7110, y:390, set:"B", axis:"y", dist:70, speed:2, phase:-73.878 }
+    ],
+    inverts: [{ x0: 380, x1: 1560 }, { x0: 5190, x1: 6570 }],
+    locks: [{ x0: 6870, x1: 7930 }],
+    goal: { x: 8310, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
-    name: "第 19 关 · 鬼门",
-    width: 4400, spawn: { x: 60, y: 400 },
+    name: "第 19 关 · 回气",
+    width: 6475, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
-      { x:-20, y:460, w:480, set:"AB" },
-      { x:460, y:96, w:540, set:"A" },
-      { x:760, y:96, w:780, set:"B" },
-      { x:440, y:460, w:260, set:"AB" },
-      { x:1560, y:460, w:260, set:"AB" },
-      { x:1800, y:460, w:1840, set:"AB" },
-      { x:3620, y:460, w:160, set:"AB" },
-      { x:3760, y:460, w:520, set:"AB" }
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:130, set:"AB" },
+      { x:830, y:460, w:340, set:"AB" },
+      { x:1150, y:460, w:260, set:"AB" },
+      { x:1390, y:460, w:130, set:"AB" },
+      { x:1820, y:460, w:340, set:"AB" },
+      { x:2140, y:460, w:130, set:"AB" },
+      { x:2570, y:460, w:340, set:"AB" },
+      { x:2890, y:460, w:60, set:"AB" },
+      { x:2960, y:200, w:270, set:"AB" },
+      { x:3290, y:340, w:270, set:"AB" },
+      { x:3665, y:200, w:260, set:"AB" },
+      { x:3955, y:460, w:300, set:"AB" },
+      { x:4235, y:460, w:1620, set:"AB" },
+      { x:5835, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:2190, y:460, set:"B" },
-      { x:2560, y:460, set:"A" },
-      { x:2930, y:460, set:"B" },
-      { x:3300, y:460, set:"A" }
+      { x:3095, y:222, set:"A", hang:true },
+      { x:4655, y:460, set:"A" },
+      { x:5085, y:460, set:"B" },
+      { x:5515, y:460, set:"A" }
     ],
-    goal: { x: 4080, y: 368, w: 44, h: 92, surf: 460 }
+    orbs: [{ x: 625, y: 305 }, { x: 1615, y: 305 }, { x: 2365, y: 305 }],
+    goal: { x: 6155, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 20 关 · 无间",
-    width: 6480, spawn: { x: 60, y: 400 },
+    width: 10295, spawn: { x: 60, y: 400 },
     hint: "",
-    ratchet: { x0: 300, x1: 3300 },
     platforms: [
-      { x:-40, y:36, w:3300, set:"AB" },
-      { x:-20, y:460, w:620, set:"AB" },
-      { x:600, y:460, w:260, set:"B" },
-      { x:860, y:460, w:560, set:"AB" },
-      { x:1820, y:460, w:340, set:"A" },
-      { x:2160, y:460, w:560, set:"AB" },
-      { x:2720, y:460, w:260, set:"B" },
-      { x:2980, y:460, w:580, set:"AB" },
-      { x:3560, y:96, w:600, set:"B" },
-      { x:3540, y:460, w:260, set:"AB" },
-      { x:4180, y:460, w:260, set:"AB" },
-      { x:4420, y:460, w:1440, set:"AB" },
-      { x:5840, y:460, w:520, set:"AB" }
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2170, set:"AB" },
+      { x:2550, y:460, w:1710, set:"AB" },
+      { x:4260, y:96, w:600, set:"B" },
+      { x:4240, y:460, w:260, set:"AB" },
+      { x:4880, y:460, w:260, set:"AB" },
+      { x:5120, y:460, w:280, set:"AB" },
+      { x:5380, y:460, w:60, set:"AB" },
+      { x:5450, y:200, w:255, set:"AB" },
+      { x:5765, y:340, w:255, set:"AB" },
+      { x:6125, y:200, w:250, set:"AB" },
+      { x:6405, y:460, w:300, set:"AB" },
+      { x:6685, y:460, w:1250, set:"AB" },
+      { x:7915, y:460, w:1780, set:"AB" },
+      { x:9655, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:1050, y:460, set:"A" },
-      { x:2400, y:460, set:"B" },
-      { x:4800, y:460, set:"A" },
-      { x:5160, y:460, set:"B" },
-      { x:5520, y:460, set:"A" }
+      { x:850, y:460, set:"A" },
+      { x:1310, y:460, set:"B" },
+      { x:1770, y:460, set:"A" },
+      { x:2230, y:460, set:"B" },
+      { x:9015, y:460, set:"A" },
+      { x:9355, y:460, set:"B" }
     ],
-    goal: { x: 6160, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:3000, y:390, set:"B", axis:"y", dist:70, speed:2, phase:-22.866 },
+      { x:3460, y:390, set:"A", axis:"y", dist:70, speed:2, phase:-27.584 },
+      { x:3920, y:390, set:"B", axis:"y", dist:70, speed:2.1, phase:-33.996 },
+      { x:7135, y:390, set:"A", axis:"y", dist:70, speed:2.1, phase:-68.619 },
+      { x:7595, y:390, set:"B", axis:"y", dist:70, speed:2.1, phase:-73.573 }
+    ],
+    speeds: [{ x0: 360, x1: 2610, mul: 1.35 }],
+    events: [{ x: 8115 }],
+    goal: { x: 9975, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 21 关 · 试炼场",
-    width: 5030, spawn: { x: 60, y: 400 },
+    width: 11030, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:2070, set:"AB" },
-      { x:2470, y:96, w:700, set:"B" },
-      { x:2450, y:460, w:260, set:"AB" },
-      { x:3190, y:460, w:260, set:"AB" },
-      { x:3430, y:460, w:60, set:"AB" },
-      { x:3500, y:200, w:250, set:"AB" },
-      { x:3810, y:340, w:260, set:"AB" },
-      { x:4110, y:460, w:300, set:"AB" },
-      { x:4390, y:460, w:520, set:"AB" }
+      { x:400, y:460, w:2510, set:"AB" },
+      { x:2890, y:460, w:1520, set:"AB" },
+      { x:4370, y:460, w:1600, set:"AB" },
+      { x:5950, y:460, w:2170, set:"AB" },
+      { x:8100, y:460, w:1670, set:"AB" },
+      { x:9770, y:96, w:640, set:"A" },
+      { x:9750, y:460, w:660, set:"AB" },
+      { x:10390, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:770, y:460, set:"A" },
-      { x:1110, y:460, set:"B" },
-      { x:1450, y:460, set:"A" },
-      { x:1790, y:460, set:"B" },
-      { x:2130, y:460, set:"A" },
-      { x:2820, y:120, set:"A", hang:true }
+      { x:850, y:460, set:"A" },
+      { x:1280, y:460, set:"B" },
+      { x:1710, y:460, set:"A" },
+      { x:2140, y:460, set:"B" },
+      { x:2570, y:460, set:"A" },
+      { x:3430, y:460, set:"B" },
+      { x:4010, y:460, set:"B" },
+      { x:4790, y:460, set:"A" },
+      { x:5210, y:460, set:"B" },
+      { x:5630, y:460, set:"A" },
+      { x:8550, y:460, set:"B" },
+      { x:8990, y:460, set:"A" },
+      { x:9430, y:460, set:"B" }
     ],
-    goal: { x: 4710, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:3470, y:390, set:"A", axis:"y", dist:70, speed:2, phase:-29.248 },
+      { x:6400, y:390, set:"B", axis:"y", dist:70, speed:2.1, phase:-59.045 },
+      { x:6860, y:390, set:"A", axis:"y", dist:70, speed:2.1, phase:-63.998 },
+      { x:7320, y:390, set:"B", axis:"y", dist:70, speed:2.2, phase:-72.311 },
+      { x:7780, y:390, set:"A", axis:"y", dist:70, speed:2.2, phase:-77.5 },
+      { x:10090, y:165, set:"B", axis:"y", dist:45, speed:2.2, phase:-106.703, hang:true }
+    ],
+    inverts: [{ x0: 8080, x1: 9790 }],
+    locks: [{ x0: 3230, x1: 4310 }],
+    speeds: [{ x0: 360, x1: 2950, mul: 1.4 }],
+    goal: { x: 10710, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 22 关 · 双生劫",
-    width: 5055, spawn: { x: 60, y: 400 },
+    width: 8710, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:480, set:"AB" },
-      { x:460, y:96, w:520, set:"B" },
-      { x:740, y:96, w:760, set:"A" },
-      { x:440, y:460, w:260, set:"AB" },
-      { x:1520, y:460, w:260, set:"AB" },
-      { x:1760, y:460, w:1390, set:"AB" },
-      { x:3130, y:460, w:60, set:"AB" },
-      { x:3200, y:200, w:250, set:"AB" },
-      { x:3510, y:340, w:250, set:"AB" },
-      { x:3865, y:200, w:240, set:"AB" },
-      { x:4135, y:460, w:300, set:"AB" },
-      { x:4415, y:460, w:520, set:"AB" }
+      { x:440, y:460, w:60, set:"AB" },
+      { x:510, y:200, w:250, set:"AB" },
+      { x:820, y:340, w:250, set:"AB" },
+      { x:1175, y:200, w:245, set:"AB" },
+      { x:1450, y:460, w:300, set:"AB" },
+      { x:1730, y:460, w:1690, set:"AB" },
+      { x:3400, y:460, w:1600, set:"AB" },
+      { x:5000, y:96, w:580, set:"B" },
+      { x:4980, y:460, w:260, set:"AB" },
+      { x:5600, y:460, w:260, set:"AB" },
+      { x:5840, y:460, w:1520, set:"AB" },
+      { x:7320, y:460, w:130, set:"AB" },
+      { x:7750, y:460, w:340, set:"AB" },
+      { x:8070, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:2130, y:460, set:"B" },
-      { x:2470, y:460, set:"A" },
-      { x:2810, y:460, set:"B" }
+      { x:3820, y:460, set:"B" },
+      { x:4240, y:460, set:"A" },
+      { x:4660, y:460, set:"B" },
+      { x:5290, y:120, set:"A", hang:true },
+      { x:6380, y:460, set:"B" },
+      { x:6960, y:460, set:"B" }
     ],
-    goal: { x: 4735, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:2180, y:390, set:"A", axis:"y", dist:70, speed:2.2, phase:-22.347 },
+      { x:2630, y:390, set:"B", axis:"y", dist:70, speed:2.2, phase:-27.424 },
+      { x:3080, y:390, set:"A", axis:"y", dist:70, speed:2.3, phase:-34.05 },
+      { x:6420, y:390, set:"A", axis:"y", dist:70, speed:2.2, phase:-73.325 }
+    ],
+    inverts: [{ x0: 420, x1: 1770 }],
+    locks: [{ x0: 6180, x1: 7260 }],
+    orbs: [{ x: 7545, y: 305 }],
+    goal: { x: 8390, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 23 关 · 千针阵",
-    width: 4390, spawn: { x: 60, y: 400 },
+    width: 11200, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:2290, set:"AB" },
-      { x:2670, y:460, w:180, set:"AB" },
-      { x:2850, y:96, w:640, set:"A" },
-      { x:2830, y:460, w:260, set:"AB" },
-      { x:3510, y:460, w:260, set:"AB" },
-      { x:3750, y:460, w:520, set:"AB" }
+      { x:400, y:460, w:2730, set:"AB" },
+      { x:3130, y:96, w:700, set:"A" },
+      { x:3110, y:460, w:260, set:"AB" },
+      { x:3850, y:460, w:260, set:"AB" },
+      { x:4090, y:460, w:2140, set:"AB" },
+      { x:6210, y:460, w:1670, set:"AB" },
+      { x:7860, y:460, w:60, set:"AB" },
+      { x:7930, y:200, w:235, set:"AB" },
+      { x:8225, y:340, w:230, set:"AB" },
+      { x:8560, y:200, w:230, set:"AB" },
+      { x:8820, y:460, w:300, set:"AB" },
+      { x:9100, y:460, w:1500, set:"AB" },
+      { x:10560, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:750, y:460, set:"A" },
-      { x:1070, y:460, set:"B" },
-      { x:1390, y:460, set:"A" },
-      { x:1710, y:460, set:"B" },
-      { x:2030, y:460, set:"A" },
-      { x:2350, y:460, set:"B" },
-      { x:3170, y:120, set:"B", hang:true }
+      { x:840, y:460, set:"A" },
+      { x:1165, y:460, set:"B" },
+      { x:1490, y:460, set:"A" },
+      { x:1815, y:460, set:"B" },
+      { x:2140, y:460, set:"A" },
+      { x:2465, y:460, set:"B" },
+      { x:2790, y:460, set:"A" },
+      { x:6660, y:460, set:"A" },
+      { x:7100, y:460, set:"B" },
+      { x:7540, y:460, set:"A" },
+      { x:9640, y:460, set:"A" },
+      { x:10200, y:460, set:"A" }
     ],
-    goal: { x: 4070, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:3430, y:165, set:"B", axis:"y", dist:45, speed:2.3, phase:-41.32, hang:true },
+      { x:3650, y:165, set:"B", axis:"y", dist:45, speed:2.4, phase:-45.755, hang:true },
+      { x:4540, y:390, set:"B", axis:"y", dist:70, speed:2.3, phase:-51.27 },
+      { x:4990, y:390, set:"A", axis:"y", dist:70, speed:2.3, phase:-56.578 },
+      { x:5440, y:390, set:"B", axis:"y", dist:70, speed:2.4, phase:-64.645 },
+      { x:5890, y:390, set:"A", axis:"y", dist:70, speed:2.4, phase:-70.183 },
+      { x:9680, y:390, set:"B", axis:"y", dist:70, speed:2.3, phase:-115.037 }
+    ],
+    inverts: [{ x0: 6190, x1: 7900 }],
+    locks: [{ x0: 9440, x1: 10500 }],
+    goal: { x: 10880, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 24 关 · 逆鳞甲",
-    width: 6865, spawn: { x: 60, y: 400 },
+    width: 13740, spawn: { x: 60, y: 400 },
     hint: "",
-    ratchet: { x0: 1975, x1: 4975 },
+    ratchet: { x0: 9860, x1: 12860 },
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:60, set:"AB" },
-      { x:470, y:200, w:240, set:"AB" },
-      { x:770, y:340, w:240, set:"AB" },
-      { x:1115, y:200, w:230, set:"AB" },
-      { x:1375, y:460, w:300, set:"AB" },
-      { x:1635, y:36, w:3300, set:"AB" },
-      { x:1655, y:460, w:620, set:"AB" },
-      { x:2275, y:460, w:260, set:"B" },
-      { x:2535, y:460, w:560, set:"AB" },
-      { x:3495, y:460, w:340, set:"A" },
-      { x:3835, y:460, w:560, set:"AB" },
-      { x:4395, y:460, w:260, set:"B" },
-      { x:4655, y:460, w:580, set:"AB" },
-      { x:5215, y:460, w:1030, set:"AB" },
-      { x:6225, y:460, w:520, set:"AB" }
+      { x:400, y:460, w:2140, set:"AB" },
+      { x:2520, y:460, w:1600, set:"AB" },
+      { x:4100, y:460, w:1320, set:"AB" },
+      { x:5380, y:460, w:1780, set:"AB" },
+      { x:7120, y:460, w:130, set:"AB" },
+      { x:7550, y:460, w:340, set:"AB" },
+      { x:7870, y:460, w:1690, set:"AB" },
+      { x:9520, y:36, w:3300, set:"AB" },
+      { x:9540, y:460, w:620, set:"AB" },
+      { x:10160, y:460, w:260, set:"B" },
+      { x:10420, y:460, w:560, set:"AB" },
+      { x:11380, y:460, w:340, set:"A" },
+      { x:11720, y:460, w:560, set:"AB" },
+      { x:12280, y:460, w:260, set:"B" },
+      { x:12540, y:460, w:580, set:"AB" },
+      { x:13100, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:890, y:340, set:"A" },
-      { x:2725, y:460, set:"A" },
-      { x:4075, y:460, set:"B" },
-      { x:5575, y:460, set:"A" },
-      { x:5905, y:460, set:"B" }
+      { x:850, y:460, set:"A" },
+      { x:1300, y:460, set:"B" },
+      { x:1750, y:460, set:"A" },
+      { x:2200, y:460, set:"B" },
+      { x:2940, y:460, set:"B" },
+      { x:3360, y:460, set:"A" },
+      { x:3780, y:460, set:"B" },
+      { x:4640, y:460, set:"B" },
+      { x:6480, y:460, set:"A" },
+      { x:6820, y:460, set:"B" },
+      { x:10610, y:460, set:"A" },
+      { x:11960, y:460, set:"B" }
     ],
-    goal: { x: 6545, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:4680, y:390, set:"A", axis:"y", dist:70, speed:2.1, phase:-45.406 },
+      { x:8320, y:390, set:"A", axis:"y", dist:70, speed:2.3, phase:-89.372 },
+      { x:8770, y:390, set:"B", axis:"y", dist:70, speed:2.3, phase:-94.68 },
+      { x:9220, y:390, set:"A", axis:"y", dist:70, speed:2.4, phase:-104.403 }
+    ],
+    inverts: [{ x0: 380, x1: 2560 }],
+    locks: [{ x0: 4440, x1: 5320 }],
+    speeds: [{ x0: 360, x1: 2580, mul: 1.35 }],
+    events: [{ x: 5580 }],
+    orbs: [{ x: 7345, y: 305 }],
+    goal: { x: 13420, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 25 关 · 修罗",
-    width: 6890, spawn: { x: 60, y: 400 },
+    width: 12480, spawn: { x: 60, y: 400 },
     hint: "",
-    ratchet: { x0: 300, x1: 3300 },
     platforms: [
-      { x:-40, y:36, w:3300, set:"AB" },
-      { x:-20, y:460, w:620, set:"AB" },
-      { x:600, y:460, w:260, set:"B" },
-      { x:860, y:460, w:560, set:"AB" },
-      { x:1820, y:460, w:340, set:"A" },
-      { x:2160, y:460, w:560, set:"AB" },
-      { x:2720, y:460, w:260, set:"B" },
-      { x:2980, y:460, w:580, set:"AB" },
-      { x:3560, y:96, w:560, set:"B" },
-      { x:3880, y:96, w:800, set:"A" },
-      { x:3540, y:460, w:260, set:"AB" },
-      { x:4700, y:460, w:260, set:"AB" },
-      { x:4940, y:460, w:1330, set:"AB" },
-      { x:6250, y:460, w:520, set:"AB" }
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:1780, set:"AB" },
+      { x:2140, y:460, w:1500, set:"AB" },
+      { x:3600, y:460, w:1990, set:"AB" },
+      { x:5570, y:460, w:1780, set:"AB" },
+      { x:7310, y:460, w:130, set:"AB" },
+      { x:7740, y:460, w:340, set:"AB" },
+      { x:8060, y:460, w:1670, set:"AB" },
+      { x:9710, y:460, w:60, set:"AB" },
+      { x:9780, y:200, w:230, set:"AB" },
+      { x:10070, y:340, w:230, set:"AB" },
+      { x:10340, y:460, w:300, set:"AB" },
+      { x:10620, y:460, w:1240, set:"AB" },
+      { x:11840, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:1050, y:460, set:"A" },
-      { x:2400, y:460, set:"B" },
-      { x:5290, y:460, set:"B" },
-      { x:5610, y:460, set:"A" },
-      { x:5930, y:460, set:"B" }
+      { x:1500, y:460, set:"A" },
+      { x:1840, y:460, set:"B" },
+      { x:2680, y:460, set:"A" },
+      { x:3240, y:460, set:"A" },
+      { x:4020, y:460, set:"B" },
+      { x:4430, y:460, set:"A" },
+      { x:4840, y:460, set:"B" },
+      { x:5250, y:460, set:"A" },
+      { x:6670, y:460, set:"B" },
+      { x:7010, y:460, set:"A" },
+      { x:8510, y:460, set:"A" },
+      { x:8950, y:460, set:"B" },
+      { x:9390, y:460, set:"A" }
     ],
-    goal: { x: 6570, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:2720, y:390, set:"B", axis:"y", dist:70, speed:2.1, phase:-30.217 },
+      { x:11070, y:390, set:"B", axis:"y", dist:70, speed:2.4, phase:-133.937 },
+      { x:11520, y:390, set:"A", axis:"y", dist:70, speed:2.4, phase:-139.475 }
+    ],
+    inverts: [{ x0: 8040, x1: 9750 }],
+    locks: [{ x0: 2480, x1: 3540 }],
+    events: [{ x: 600 }, { x: 5770 }],
+    orbs: [{ x: 7535, y: 305 }],
+    goal: { x: 12160, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 26 关 · 炼狱门",
-    width: 4735, spawn: { x: 60, y: 400 },
+    width: 9945, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:1610, set:"AB" },
-      { x:1990, y:460, w:60, set:"AB" },
-      { x:2060, y:200, w:230, set:"AB" },
-      { x:2350, y:340, w:230, set:"AB" },
-      { x:2685, y:200, w:220, set:"AB" },
-      { x:2935, y:460, w:300, set:"AB" },
-      { x:3235, y:96, w:600, set:"B" },
-      { x:3215, y:460, w:260, set:"AB" },
-      { x:3855, y:460, w:260, set:"AB" },
-      { x:4095, y:460, w:520, set:"AB" }
+      { x:400, y:460, w:130, set:"AB" },
+      { x:830, y:460, w:340, set:"AB" },
+      { x:1150, y:460, w:60, set:"AB" },
+      { x:1220, y:200, w:225, set:"AB" },
+      { x:1505, y:340, w:220, set:"AB" },
+      { x:1830, y:200, w:215, set:"AB" },
+      { x:2075, y:460, w:300, set:"AB" },
+      { x:2355, y:460, w:130, set:"AB" },
+      { x:2785, y:460, w:340, set:"AB" },
+      { x:3125, y:96, w:600, set:"B" },
+      { x:3105, y:460, w:260, set:"AB" },
+      { x:3745, y:460, w:260, set:"AB" },
+      { x:3985, y:460, w:2140, set:"AB" },
+      { x:6105, y:460, w:1780, set:"AB" },
+      { x:7845, y:460, w:1500, set:"AB" },
+      { x:9305, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:740, y:460, set:"A" },
-      { x:1050, y:460, set:"B" },
-      { x:1360, y:460, set:"A" },
-      { x:1670, y:460, set:"B" },
-      { x:3535, y:120, set:"A", hang:true }
+      { x:1615, y:340, set:"B" },
+      { x:3425, y:120, set:"A", hang:true },
+      { x:7205, y:460, set:"A" },
+      { x:7545, y:460, set:"B" },
+      { x:8385, y:460, set:"B" },
+      { x:8945, y:460, set:"B" }
     ],
-    goal: { x: 4415, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:4435, y:390, set:"A", axis:"y", dist:70, speed:2.2, phase:-47.788 },
+      { x:4885, y:390, set:"B", axis:"y", dist:70, speed:2.2, phase:-52.865 },
+      { x:5335, y:390, set:"A", axis:"y", dist:70, speed:2.3, phase:-60.647 },
+      { x:5785, y:390, set:"B", axis:"y", dist:70, speed:2.3, phase:-65.955 },
+      { x:8425, y:390, set:"A", axis:"y", dist:70, speed:2.3, phase:-100.235 }
+    ],
+    locks: [{ x0: 8185, x1: 9245 }],
+    events: [{ x: 6305 }],
+    orbs: [{ x: 625, y: 305 }, { x: 2580, y: 305 }],
+    goal: { x: 9625, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 27 关 · 九死",
-    width: 7375, spawn: { x: 60, y: 400 },
+    width: 12905, spawn: { x: 60, y: 400 },
     hint: "",
-    ratchet: { x0: 3495, x1: 6495 },
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:60, set:"AB" },
-      { x:470, y:200, w:230, set:"AB" },
-      { x:760, y:340, w:220, set:"AB" },
-      { x:1085, y:200, w:220, set:"AB" },
-      { x:1365, y:340, w:210, set:"AB" },
-      { x:1615, y:460, w:300, set:"AB" },
-      { x:1895, y:460, w:1300, set:"AB" },
-      { x:3155, y:36, w:3300, set:"AB" },
-      { x:3175, y:460, w:620, set:"AB" },
-      { x:3795, y:460, w:260, set:"B" },
-      { x:4055, y:460, w:560, set:"AB" },
-      { x:5015, y:460, w:340, set:"A" },
-      { x:5355, y:460, w:560, set:"AB" },
-      { x:5915, y:460, w:260, set:"B" },
-      { x:6175, y:460, w:580, set:"AB" },
-      { x:6735, y:460, w:520, set:"AB" }
+      { x:400, y:460, w:2590, set:"AB" },
+      { x:2970, y:460, w:1690, set:"AB" },
+      { x:4660, y:96, w:660, set:"B" },
+      { x:4640, y:460, w:260, set:"AB" },
+      { x:5340, y:460, w:260, set:"AB" },
+      { x:5580, y:460, w:1580, set:"AB" },
+      { x:7140, y:460, w:60, set:"AB" },
+      { x:7210, y:200, w:215, set:"AB" },
+      { x:7485, y:340, w:210, set:"AB" },
+      { x:7800, y:200, w:205, set:"AB" },
+      { x:8035, y:460, w:300, set:"AB" },
+      { x:8315, y:460, w:1780, set:"AB" },
+      { x:10055, y:460, w:130, set:"AB" },
+      { x:10485, y:460, w:340, set:"AB" },
+      { x:10805, y:460, w:1500, set:"AB" },
+      { x:12265, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:870, y:340, set:"B" },
-      { x:2235, y:460, set:"A" },
-      { x:2545, y:460, set:"B" },
-      { x:2855, y:460, set:"A" },
-      { x:4245, y:460, set:"A" },
-      { x:5595, y:460, set:"B" }
+      { x:3420, y:460, set:"B" },
+      { x:3870, y:460, set:"A" },
+      { x:4320, y:460, set:"B" },
+      { x:6000, y:460, set:"A" },
+      { x:6410, y:460, set:"B" },
+      { x:6820, y:460, set:"A" },
+      { x:9415, y:460, set:"A" },
+      { x:9755, y:460, set:"B" },
+      { x:11345, y:460, set:"A" },
+      { x:11905, y:460, set:"A" }
     ],
-    goal: { x: 7055, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:850, y:390, set:"A", axis:"y", dist:70, speed:2.5, phase:-8.557 },
+      { x:1300, y:390, set:"B", axis:"y", dist:70, speed:2.5, phase:-14.327 },
+      { x:1750, y:390, set:"A", axis:"y", dist:70, speed:2.6, phase:-20.963 },
+      { x:2200, y:390, set:"B", axis:"y", dist:70, speed:2.6, phase:-26.963 },
+      { x:2650, y:390, set:"A", axis:"y", dist:70, speed:2.7, phase:-34.291 },
+      { x:4990, y:165, set:"A", axis:"y", dist:45, speed:2.6, phase:-60.394, hang:true },
+      { x:11385, y:390, set:"B", axis:"y", dist:70, speed:2.5, phase:-140.119 }
+    ],
+    locks: [{ x0: 11145, x1: 12205 }],
+    speeds: [{ x0: 2930, x1: 4700, mul: 1.45 }],
+    events: [{ x: 8515 }],
+    orbs: [{ x: 10280, y: 305 }],
+    goal: { x: 12585, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 28 关 · 无间道",
-    width: 5350, spawn: { x: 60, y: 400 },
+    width: 14420, spawn: { x: 60, y: 400 },
     hint: "",
     platforms: [
       { x:-20, y:460, w:480, set:"AB" },
-      { x:460, y:96, w:500, set:"A" },
-      { x:720, y:96, w:740, set:"B" },
-      { x:1220, y:96, w:740, set:"A" },
-      { x:440, y:460, w:260, set:"AB" },
-      { x:1980, y:460, w:260, set:"AB" },
-      { x:2220, y:460, w:1610, set:"AB" },
-      { x:3810, y:460, w:60, set:"AB" },
-      { x:3880, y:200, w:230, set:"AB" },
-      { x:4170, y:340, w:220, set:"AB" },
-      { x:4430, y:460, w:300, set:"AB" },
-      { x:4710, y:460, w:520, set:"AB" }
+      { x:440, y:460, w:2110, set:"AB" },
+      { x:2530, y:460, w:1780, set:"AB" },
+      { x:4270, y:460, w:2060, set:"AB" },
+      { x:6290, y:460, w:2140, set:"AB" },
+      { x:8410, y:460, w:130, set:"AB" },
+      { x:8840, y:460, w:340, set:"AB" },
+      { x:9160, y:460, w:1780, set:"AB" },
+      { x:10900, y:460, w:1690, set:"AB" },
+      { x:12570, y:460, w:60, set:"AB" },
+      { x:12640, y:200, w:225, set:"AB" },
+      { x:12925, y:340, w:220, set:"AB" },
+      { x:13250, y:200, w:220, set:"AB" },
+      { x:13500, y:460, w:300, set:"AB" },
+      { x:13780, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:2560, y:460, set:"B" },
-      { x:2870, y:460, set:"A" },
-      { x:3180, y:460, set:"B" },
-      { x:3490, y:460, set:"A" }
+      { x:890, y:460, set:"A" },
+      { x:1330, y:460, set:"B" },
+      { x:1770, y:460, set:"A" },
+      { x:2210, y:460, set:"B" },
+      { x:3630, y:460, set:"A" },
+      { x:3970, y:460, set:"B" },
+      { x:4810, y:460, set:"B" },
+      { x:5370, y:460, set:"B" },
+      { x:5930, y:460, set:"B" },
+      { x:6740, y:460, set:"B" },
+      { x:7190, y:460, set:"A" },
+      { x:7640, y:460, set:"B" },
+      { x:8090, y:460, set:"A" },
+      { x:10260, y:460, set:"B" },
+      { x:10600, y:460, set:"A" }
     ],
-    goal: { x: 5030, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:4850, y:390, set:"A", axis:"y", dist:70, speed:2.3, phase:-58.068 },
+      { x:11350, y:390, set:"A", axis:"y", dist:70, speed:2.4, phase:-131.362 },
+      { x:11800, y:390, set:"B", axis:"y", dist:70, speed:2.4, phase:-136.9 },
+      { x:12250, y:390, set:"A", axis:"y", dist:70, speed:2.5, phase:-148.439 }
+    ],
+    inverts: [{ x0: 420, x1: 2570 }],
+    locks: [{ x0: 4610, x1: 6230 }],
+    speeds: [{ x0: 6250, x1: 8470, mul: 1.3 }],
+    events: [{ x: 2730 }, { x: 9360 }],
+    orbs: [{ x: 8635, y: 305 }],
+    goal: { x: 14100, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 29 关 · 轮回",
-    width: 8475, spawn: { x: 60, y: 400 },
+    width: 13800, spawn: { x: 60, y: 400 },
     hint: "",
-    ratchet: { x0: 2570, x1: 5570 },
     platforms: [
       { x:-20, y:460, w:440, set:"AB" },
-      { x:400, y:460, w:1870, set:"AB" },
-      { x:2230, y:36, w:3300, set:"AB" },
-      { x:2250, y:460, w:620, set:"AB" },
-      { x:2870, y:460, w:260, set:"B" },
-      { x:3130, y:460, w:560, set:"AB" },
-      { x:4090, y:460, w:340, set:"A" },
-      { x:4430, y:460, w:560, set:"AB" },
-      { x:4990, y:460, w:260, set:"B" },
-      { x:5250, y:460, w:580, set:"AB" },
-      { x:5810, y:460, w:60, set:"AB" },
-      { x:5880, y:200, w:220, set:"AB" },
-      { x:6160, y:340, w:210, set:"AB" },
-      { x:6475, y:200, w:210, set:"AB" },
-      { x:6715, y:460, w:300, set:"AB" },
-      { x:7015, y:96, w:560, set:"B" },
-      { x:6995, y:460, w:260, set:"AB" },
-      { x:7595, y:460, w:260, set:"AB" },
-      { x:7835, y:460, w:520, set:"AB" }
+      { x:400, y:460, w:2140, set:"AB" },
+      { x:2520, y:460, w:2140, set:"AB" },
+      { x:4640, y:460, w:1670, set:"AB" },
+      { x:6290, y:460, w:1780, set:"AB" },
+      { x:8030, y:460, w:130, set:"AB" },
+      { x:8460, y:460, w:340, set:"AB" },
+      { x:8800, y:96, w:560, set:"B" },
+      { x:9120, y:96, w:800, set:"A" },
+      { x:8780, y:460, w:260, set:"AB" },
+      { x:9940, y:460, w:260, set:"AB" },
+      { x:10180, y:460, w:1500, set:"AB" },
+      { x:11640, y:460, w:130, set:"AB" },
+      { x:12070, y:460, w:340, set:"AB" },
+      { x:12390, y:460, w:790, set:"AB" },
+      { x:13160, y:460, w:520, set:"AB" }
     ],
     spikes: [
-      { x:730, y:460, set:"A" },
-      { x:1030, y:460, set:"B" },
-      { x:1330, y:460, set:"A" },
-      { x:1630, y:460, set:"B" },
-      { x:1930, y:460, set:"A" },
-      { x:3320, y:460, set:"A" },
-      { x:4670, y:460, set:"B" },
-      { x:7295, y:120, set:"A", hang:true }
+      { x:850, y:460, set:"A" },
+      { x:1300, y:460, set:"B" },
+      { x:1750, y:460, set:"A" },
+      { x:2200, y:460, set:"B" },
+      { x:5090, y:460, set:"B" },
+      { x:5530, y:460, set:"A" },
+      { x:5970, y:460, set:"B" },
+      { x:7390, y:460, set:"A" },
+      { x:7730, y:460, set:"B" },
+      { x:10720, y:460, set:"A" },
+      { x:11280, y:460, set:"A" }
     ],
-    goal: { x: 8155, y: 368, w: 44, h: 92, surf: 460 }
+    movers: [
+      { x:2970, y:390, set:"B", axis:"y", dist:70, speed:2.4, phase:-26.79 },
+      { x:3420, y:390, set:"A", axis:"y", dist:70, speed:2.4, phase:-32.328 },
+      { x:3870, y:390, set:"B", axis:"y", dist:70, speed:2.5, phase:-39.51 },
+      { x:4320, y:390, set:"A", axis:"y", dist:70, speed:2.5, phase:-45.279 },
+      { x:10760, y:390, set:"B", axis:"y", dist:70, speed:2.4, phase:-125.808 },
+      { x:12840, y:390, set:"B", axis:"y", dist:70, speed:2.5, phase:-154.51 }
+    ],
+    inverts: [{ x0: 4620, x1: 6330 }],
+    locks: [{ x0: 10520, x1: 11580 }],
+    speeds: [{ x0: 360, x1: 2580, mul: 1.4 }],
+    events: [{ x: 6490 }],
+    orbs: [{ x: 8255, y: 305 }, { x: 11865, y: 305 }],
+    goal: { x: 13480, y: 368, w: 44, h: 92, surf: 460 }
   },
   {
     name: "第 30 关 · 地狱",
-    width: 9845, spawn: { x: 60, y: 400 },
+    width: 15090, spawn: { x: 60, y: 400 },
     hint: "",
-    ratchet: { x0: 300, x1: 3300 },
     platforms: [
-      { x:-40, y:36, w:3300, set:"AB" },
-      { x:-20, y:460, w:620, set:"AB" },
-      { x:600, y:460, w:260, set:"B" },
-      { x:860, y:460, w:560, set:"AB" },
-      { x:1820, y:460, w:340, set:"A" },
-      { x:2160, y:460, w:560, set:"AB" },
-      { x:2720, y:460, w:260, set:"B" },
-      { x:2980, y:460, w:580, set:"AB" },
-      { x:3540, y:460, w:1530, set:"AB" },
-      { x:5050, y:460, w:60, set:"AB" },
-      { x:5120, y:200, w:210, set:"AB" },
-      { x:5390, y:340, w:200, set:"AB" },
-      { x:5695, y:200, w:200, set:"AB" },
-      { x:5955, y:340, w:190, set:"AB" },
-      { x:6185, y:460, w:300, set:"AB" },
-      { x:6485, y:96, w:520, set:"B" },
-      { x:6765, y:96, w:760, set:"A" },
-      { x:6465, y:460, w:260, set:"AB" },
-      { x:7545, y:460, w:260, set:"AB" },
-      { x:7785, y:460, w:1240, set:"AB" },
-      { x:9025, y:96, w:760, set:"A" },
-      { x:9005, y:460, w:260, set:"AB" },
-      { x:9805, y:460, w:260, set:"AB" }
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:1980, set:"AB" },
+      { x:2360, y:460, w:2590, set:"AB" },
+      { x:4930, y:460, w:2140, set:"AB" },
+      { x:7050, y:460, w:1670, set:"AB" },
+      { x:8700, y:460, w:1780, set:"AB" },
+      { x:10440, y:460, w:130, set:"AB" },
+      { x:10870, y:460, w:340, set:"AB" },
+      { x:11190, y:460, w:1500, set:"AB" },
+      { x:12650, y:460, w:1780, set:"AB" },
+      { x:14410, y:96, w:620, set:"B" },
+      { x:14390, y:460, w:260, set:"AB" },
+      { x:15050, y:460, w:260, set:"AB" }
     ],
     spikes: [
-      { x:1050, y:460, set:"A" },
-      { x:2400, y:460, set:"B" },
-      { x:3860, y:460, set:"A" },
-      { x:4150, y:460, set:"B" },
-      { x:4440, y:460, set:"A" },
-      { x:4730, y:460, set:"B" },
-      { x:5490, y:340, set:"A" },
-      { x:8105, y:460, set:"B" },
-      { x:8395, y:460, set:"A" },
-      { x:8685, y:460, set:"B" },
-      { x:9385, y:120, set:"B", hang:true }
+      { x:840, y:460, set:"A" },
+      { x:1140, y:460, set:"B" },
+      { x:1440, y:460, set:"A" },
+      { x:1740, y:460, set:"B" },
+      { x:2040, y:460, set:"A" },
+      { x:5380, y:460, set:"A" },
+      { x:5830, y:460, set:"B" },
+      { x:6280, y:460, set:"A" },
+      { x:6730, y:460, set:"B" },
+      { x:7500, y:460, set:"B" },
+      { x:7940, y:460, set:"A" },
+      { x:8380, y:460, set:"B" },
+      { x:9800, y:460, set:"A" },
+      { x:10140, y:460, set:"B" },
+      { x:11730, y:460, set:"B" },
+      { x:12290, y:460, set:"B" },
+      { x:13750, y:460, set:"B" },
+      { x:14090, y:460, set:"A" },
+      { x:14720, y:120, set:"A", hang:true }
     ],
-    goal: { x: 9575, y: 96, w: 44, h: 70, surf: 118, ceil:true }
+    movers: [
+      { x:2810, y:390, set:"B", axis:"y", dist:70, speed:2.7, phase:-36.506 },
+      { x:3260, y:390, set:"A", axis:"y", dist:70, speed:2.7, phase:-42.737 },
+      { x:3710, y:390, set:"B", axis:"y", dist:70, speed:2.8, phase:-50.839 },
+      { x:4160, y:390, set:"A", axis:"y", dist:70, speed:2.8, phase:-57.301 },
+      { x:4610, y:390, set:"B", axis:"y", dist:70, speed:2.9, phase:-66.096 },
+      { x:11770, y:390, set:"A", axis:"y", dist:70, speed:2.6, phase:-148.282 }
+    ],
+    inverts: [{ x0: 7030, x1: 8740 }],
+    locks: [{ x0: 11530, x1: 12590 }],
+    speeds: [{ x0: 4890, x1: 7110, mul: 1.5 }],
+    events: [{ x: 8900 }, { x: 12850 }],
+    orbs: [{ x: 10665, y: 305 }],
+    goal: { x: 14820, y: 96, w: 44, h: 70, surf: 118, ceil:true }
   }
 ];
 
@@ -919,8 +1254,8 @@ const ACH = [
   { id: "half",   name: "过半",     desc: "通关第 15 关" },
   { id: "all",    name: "全境移位", desc: "通关全部 30 关" },
   { id: "clean",  name: "毫发无损", desc: "任意一关零死亡通关" },
-  { id: "frugal", name: "精打细算", desc: "全程不超过 520 次移位通关" },
-  { id: "swift",  name: "疾风",     desc: "全程 950 秒内通关" }
+  { id: "frugal", name: "精打细算", desc: "全程不超过 720 次移位通关" },
+  { id: "swift",  name: "疾风",     desc: "全程 1700 秒内通关" }
 ];
 let achDone = [];
 try { achDone = JSON.parse(localStorage.getItem("sixiang_ach_v1") || "[]"); if (!Array.isArray(achDone)) achDone = []; } catch(e) {}
@@ -946,8 +1281,8 @@ function commitRun(){
   if (records.run.s === null || runShifts < records.run.s) records.run.s = runShifts;
   saveRecords();
   unlockAch("all");
-  if (runShifts <= 520) unlockAch("frugal");
-  if (runTime <= 950) unlockAch("swift");
+  if (runShifts <= 720) unlockAch("frugal");
+  if (runTime <= 1700) unlockAch("swift");
 }
 
 function curState(){ return CONFIG.states[ring]; }
@@ -958,6 +1293,7 @@ function loadLevel(i){
   levelIdx = i; level = LEVELS[i];
   ring = 0; tutIdx = 0; shiftCD = 0; coyote = 0; airFlip = true;
   levelShifts = 0; levelTime = 0; levelDeathsStart = deaths;
+  attemptTime = 0; evWarn = null; evDone = {}; orbTaken = {};
   player.x = level.spawn.x; player.y = level.spawn.y;
   player.vx = 0; player.vy = 0; player.grounded = false;
   camX = 0; particles = [];
@@ -966,6 +1302,7 @@ function respawn(){
   player.x = level.spawn.x; player.y = level.spawn.y;
   player.vx = 0; player.vy = 0;
   ring = 0; shiftCD = 0; coyote = 0; airFlip = true;
+  attemptTime = 0; evWarn = null; evDone = {}; orbTaken = {};
 }
 
 let denyT = 0; // ratchet deny feedback timer
@@ -981,11 +1318,37 @@ function ratchetZones(){
 function inRatchet(){
   return ratchetZones().some(r => player.x >= r.x0 && player.x <= r.x1);
 }
+/* ---- v4 mechanics: movers / invert / speed / lock / events / orbs ---- */
+let attemptTime = 0;              // resets every attempt: mover phases are deterministic per attempt
+let evWarn = null;                // {dir, t} telegraphed forced shift (异变事件)
+let evDone = {}, orbTaken = {};
+function inZoneList(list){ return (list || []).some(r => player.x >= r.x0 && player.x <= r.x1); }
+function inInvert(){ return inZoneList(level.inverts); }
+function inLock(){ return inZoneList(level.locks); }
+function speedMul(){
+  let m = 1;
+  for (const z of level.speeds || []) if (player.x >= z.x0 && player.x <= z.x1) m *= z.mul;
+  return m;
+}
+function moverPos(m){
+  const o = Math.sin(attemptTime * m.speed + m.phase) * m.dist;
+  return { x: m.x + (m.axis === "x" ? o : 0), y: m.y + (m.axis === "y" ? o : 0) };
+}
+function forceShift(dir){
+  ring = (ring + dir + CONFIG.states.length) % CONFIG.states.length;
+  flash = 0.35; shake = Math.max(shake, 5);
+  burst(player.x + 15, player.y + 15, "#ffd43b");
+  sfx("shift", dir);
+}
 /* THE single entry point that may change the world state.
    Ratchet zones are the one exception to free shifting: inside them the
    ring only moves forward — backshift is denied (with feedback). */
 function shift(dir){
   if (shiftCD > 0) return;
+  if (inLock()){
+    denyT = 1.0; shake = Math.max(shake, 4); sfx("deny");
+    return;
+  }
   if (dir < 0 && inRatchet()){
     denyT = 1.0; shake = Math.max(shake, 4); sfx("deny");
     return;
@@ -1069,6 +1432,7 @@ function pressShift(dir){
   if (screen === "title") { runTime = 0; deaths = 0; runShifts = 0; achToast = ""; screen = "play"; loadLevel(0); Music.start(); return; }
   if (screen === "win")   { screen = "title"; return; }
   if (screen !== "play") return;
+  if (inInvert()) dir = -dir;   // 颠倒区：左右互换（输入层反转，规则照常生效）
   shift(dir);
 }
 window.addEventListener("keydown", (e) => {
@@ -1120,10 +1484,10 @@ function overlaps(a, b){ return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y 
 function step(dt){
   if (screen === "clear") { clearTimer -= dt; if (clearTimer <= 0) { if (levelIdx + 1 > unlocked) { unlocked = Math.min(levelIdx + 1, LEVELS.length - 1); saveUnlock(); } if (levelIdx + 1 < LEVELS.length) { loadLevel(levelIdx + 1); screen = "play"; } else { commitRun(); screen = "win"; } } }
   if (screen !== "play") return;
-  runTime += dt; levelTime += dt;
+  runTime += dt; levelTime += dt; attemptTime += dt;
   if (shiftCD > 0) shiftCD -= dt;
   const st = curState(), S = CONFIG.playerSize, PH = 22;
-  player.vx = CONFIG.runSpeed;
+  player.vx = CONFIG.runSpeed * speedMul();
   player.vy += CONFIG.gravity * st.grav * dt;
   player.vy = Math.max(-CONFIG.maxFall, Math.min(CONFIG.maxFall, player.vy));
 
@@ -1151,6 +1515,35 @@ function step(dt){
     if (!spikeActive(s)) continue;
     const sb = s.hang ? { x: s.x, y: s.y, w: 26, h: 20 } : { x: s.x, y: s.y - 20, w: 26, h: 20 };
     if (overlaps(box, sb)) { die(); return; }
+  }
+  // moving spikes (patrolling hazards, phase-locked to the attempt clock)
+  for (const m of level.movers || []){
+    if (!spikeActive(m)) continue;
+    const mp = moverPos(m);
+    const sb = m.hang ? { x: mp.x, y: mp.y, w: 26, h: 20 } : { x: mp.x, y: mp.y - 20, w: 26, h: 20 };
+    if (overlaps(box, sb)) { die(); return; }
+  }
+  // orbs: touching one restores the mid-air gravity flip (回气珠)
+  for (let i = 0; i < (level.orbs || []).length; i++){
+    if (orbTaken[i]) continue;
+    const o = level.orbs[i], dx = player.x + 15 - o.x, dy = player.y + 15 - o.y;
+    if (dx * dx + dy * dy < 36 * 36 && !airFlip){
+      airFlip = true; orbTaken[i] = true;
+      burst(o.x, o.y, "#66d9e8"); sfx("goal");
+    }
+  }
+  // random events: telegraphed forced shift (异变)
+  for (let i = 0; i < (level.events || []).length; i++){
+    if (evDone[i]) continue;
+    if (player.x >= level.events[i].x){
+      evDone[i] = true;
+      evWarn = { dir: Math.random() < 0.5 ? 1 : -1, t: 0.85 };
+      sfx("deny");
+    }
+  }
+  if (evWarn){
+    evWarn.t -= dt;
+    if (evWarn.t <= 0){ forceShift(evWarn.dir); evWarn = null; }
   }
   // fell / flew out
   if (player.y > CONFIG.killBelowY || player.y < CONFIG.killAboveY) { die(); return; }
@@ -1195,6 +1588,22 @@ function draw(){
     ctx.fillStyle = "rgba(255,120,120,0.8)"; ctx.font = "bold 15px system-ui"; ctx.textAlign = "left";
     ctx.fillText("⇢ 棘轮区 — 只能向前", r.x0 + 12, 90);
   }
+  // v4 zone tints
+  for (const r of level.inverts || []){
+    ctx.fillStyle = "rgba(177,106,255,0.07)"; ctx.fillRect(r.x0, 0, r.x1 - r.x0, CONFIG.viewH);
+    ctx.fillStyle = "rgba(200,150,255,0.85)"; ctx.font = "bold 15px system-ui"; ctx.textAlign = "left";
+    ctx.fillText("⇄ 颠倒区 — 左右互换", r.x0 + 12, 90);
+  }
+  for (const r of level.locks || []){
+    ctx.fillStyle = "rgba(160,170,190,0.10)"; ctx.fillRect(r.x0, 0, r.x1 - r.x0, CONFIG.viewH);
+    ctx.fillStyle = "rgba(200,210,225,0.85)"; ctx.font = "bold 15px system-ui"; ctx.textAlign = "left";
+    ctx.fillText("⊘ 凝滞区 — 无法移位", r.x0 + 12, 90);
+  }
+  for (const r of level.speeds || []){
+    ctx.fillStyle = "rgba(255,212,59,0.05)"; ctx.fillRect(r.x0, 0, r.x1 - r.x0, CONFIG.viewH);
+    ctx.fillStyle = "rgba(255,220,100,0.85)"; ctx.font = "bold 15px system-ui"; ctx.textAlign = "left";
+    ctx.fillText("» 加速区", r.x0 + 12, 90);
+  }
   // ghost (inactive) platforms first
   for (const p of level.platforms){
     if (platActive(p)) continue;
@@ -1220,6 +1629,30 @@ function draw(){
     else { ctx.moveTo(s.x, s.y); ctx.lineTo(s.x + 13, s.y - 20); ctx.lineTo(s.x + 26, s.y); }
     ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1;
   }
+  // movers: track + spike at current phase position
+  for (const m of level.movers || []){
+    const mp = moverPos(m);
+    ctx.strokeStyle = "rgba(255,255,255,0.18)"; ctx.lineWidth = 2;
+    ctx.beginPath();
+    if (m.axis === "y"){ ctx.moveTo(m.x + 13, m.y - m.dist); ctx.lineTo(m.x + 13, m.y + m.dist); }
+    else { ctx.moveTo(m.x - m.dist, m.y - 10); ctx.lineTo(m.x + m.dist, m.y - 10); }
+    ctx.stroke();
+    if (!spikeActive(m)) ctx.globalAlpha = 0.3;
+    ctx.fillStyle = "#ff922b";
+    ctx.beginPath();
+    if (m.hang){ ctx.moveTo(mp.x, mp.y); ctx.lineTo(mp.x + 13, mp.y + 20); ctx.lineTo(mp.x + 26, mp.y); }
+    else { ctx.moveTo(mp.x, mp.y); ctx.lineTo(mp.x + 13, mp.y - 20); ctx.lineTo(mp.x + 26, mp.y); }
+    ctx.closePath(); ctx.fill(); ctx.globalAlpha = 1;
+  }
+  // orbs
+  for (let i = 0; i < (level.orbs || []).length; i++){
+    if (orbTaken[i]) continue;
+    const o = level.orbs[i], pr = 10 + Math.sin(performance.now() / 240) * 2;
+    ctx.strokeStyle = "#66d9e8"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.arc(o.x, o.y, pr + 5, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = "#a5f3fc";
+    ctx.beginPath(); ctx.arc(o.x, o.y, pr - 3, 0, Math.PI * 2); ctx.fill();
+  }
   // goal flag (stands on a floor surface, or hangs from a ceiling one)
   const g = level.goal;
   if (g.ceil){
@@ -1244,6 +1677,11 @@ function draw(){
   ctx.restore();
   if (flash > 0){ ctx.fillStyle = "rgba(255,255,255," + (flash * 0.5) + ")"; ctx.fillRect(0, 0, W, H); }
 
+  if (evWarn && screen === "play"){
+    ctx.fillStyle = "rgba(20,10,0,0.45)"; ctx.fillRect(0, 150, W, 64);
+    ctx.fillStyle = "#ffd43b"; ctx.font = "bold 26px system-ui"; ctx.textAlign = "center";
+    ctx.fillText(evWarn.dir > 0 ? "⚠ 异变！即将强制前移 →" : "⚠ 异变！即将强制后移 ←", W / 2, 192);
+  }
   if (screen === "play" || screen === "clear") drawHUD();
   if (screen === "title") drawTitle();
   if (screen === "clear") centerText("过关！", achToast, "#51cf66");
@@ -1255,8 +1693,9 @@ function draw(){
     rr(padL.x, padL.y, padL.w, padL.h, 14); ctx.fill();
     rr(padR.x, padR.y, padR.w, padR.h, 14); ctx.fill();
     ctx.globalAlpha = 1; ctx.fillStyle = "#14142b"; ctx.font = "bold 21px system-ui"; ctx.textAlign = "center";
-    ctx.fillText("◀ 后移", padL.x + padL.w / 2, padL.y + 46);
-    ctx.fillText("前移 ▶", padR.x + padR.w / 2, padR.y + 46);
+    const inv = screen === "play" && inInvert();
+    ctx.fillText(inv ? "前移 ▶" : "◀ 后移", padL.x + padL.w / 2, padL.y + 46);
+    ctx.fillText(inv ? "◀ 后移" : "前移 ▶", padR.x + padR.w / 2, padR.y + 46);
   }
   drawTut();
 }
@@ -1438,6 +1877,8 @@ window.__game = {
   get ach(){ return achDone.slice(); },
   get player(){ return { x: player.x, y: player.y, grounded: player.grounded }; },
   get tut(){ return { idx: tutIdx, total: tutSteps().length, current: tutCurrent() ? tutCurrent().text : null }; },
+  get inverted(){ return inInvert(); }, get locked(){ return inLock(); },
+  get evDir(){ return evWarn ? evWarn.dir : 0; },
   pressShift, loadLevel: (i) => { loadLevel(i); screen = "play"; }
 };
 </script>
