@@ -249,6 +249,553 @@ const LEVELS = [
       { x:3750, y:460, set:"A" }
     ],
     goal: { x: 4450, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 11 关 · 连珠",
+    width: 4960, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:520, set:"AB" },
+      { x:480, y:460, w:1620, set:"AB" },
+      { x:2080, y:460, w:260, set:"AB" },
+      { x:2340, y:96, w:700, set:"B" },
+      { x:2320, y:460, w:720, set:"AB" },
+      { x:3020, y:460, w:220, set:"AB" },
+      { x:3220, y:460, w:1120, set:"AB" },
+      { x:4320, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:920, y:460, set:"A" },
+      { x:1340, y:460, set:"B" },
+      { x:1760, y:460, set:"A" },
+      { x:3620, y:460, set:"B" },
+      { x:4000, y:460, set:"A" }
+    ],
+    goal: { x: 4640, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 12 关 · 双生",
+    width: 4550, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:420, y:96, w:620, set:"A" },
+      { x:400, y:460, w:640, set:"AB" },
+      { x:1020, y:460, w:260, set:"AB" },
+      { x:1260, y:460, w:1600, set:"AB" },
+      { x:2840, y:460, w:60, set:"AB" },
+      { x:2910, y:200, w:300, set:"AB" },
+      { x:3270, y:340, w:320, set:"AB" },
+      { x:3630, y:460, w:300, set:"AB" },
+      { x:3910, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:720, y:120, set:"B", hang:true },
+      { x:1680, y:460, set:"B" },
+      { x:2100, y:460, set:"A" },
+      { x:2520, y:460, set:"B" }
+    ],
+    goal: { x: 4230, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 13 关 · 回廊",
+    width: 4340, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:420, y:96, w:560, set:"B" },
+      { x:740, y:96, w:800, set:"A" },
+      { x:400, y:460, w:1140, set:"AB" },
+      { x:1520, y:460, w:260, set:"AB" },
+      { x:1760, y:460, w:1960, set:"AB" },
+      { x:3700, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:2180, y:460, set:"A" },
+      { x:2580, y:460, set:"B" },
+      { x:2980, y:460, set:"A" },
+      { x:3380, y:460, set:"B" }
+    ],
+    goal: { x: 4020, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 14 关 · 千针",
+    width: 4160, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2260, set:"AB" },
+      { x:2640, y:460, w:220, set:"AB" },
+      { x:2860, y:96, w:680, set:"B" },
+      { x:2840, y:460, w:700, set:"AB" },
+      { x:3520, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:800, y:460, set:"A" },
+      { x:1180, y:460, set:"B" },
+      { x:1560, y:460, set:"A" },
+      { x:1940, y:460, set:"B" },
+      { x:2320, y:460, set:"A" },
+      { x:3200, y:120, set:"A", hang:true }
+    ],
+    goal: { x: 3840, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 15 关 · 绝壁",
+    width: 4330, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:480, set:"AB" },
+      { x:460, y:96, w:900, set:"B" },
+      { x:440, y:460, w:260, set:"AB" },
+      { x:1380, y:460, w:260, set:"AB" },
+      { x:1620, y:460, w:1930, set:"AB" },
+      { x:3530, y:460, w:180, set:"AB" },
+      { x:3690, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:760, y:120, set:"A", hang:true },
+      { x:1080, y:120, set:"A", hang:true },
+      { x:2040, y:460, set:"B" },
+      { x:2430, y:460, set:"A" },
+      { x:2820, y:460, set:"B" },
+      { x:3210, y:460, set:"A" }
+    ],
+    goal: { x: 4010, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 16 关 · 镜面",
+    width: 4625, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:60, set:"AB" },
+      { x:470, y:200, w:290, set:"AB" },
+      { x:820, y:340, w:300, set:"AB" },
+      { x:1225, y:200, w:290, set:"AB" },
+      { x:1545, y:460, w:300, set:"AB" },
+      { x:1825, y:460, w:220, set:"AB" },
+      { x:2025, y:460, w:1140, set:"AB" },
+      { x:3165, y:96, w:560, set:"A" },
+      { x:3145, y:460, w:260, set:"AB" },
+      { x:3745, y:460, w:260, set:"AB" },
+      { x:3985, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:970, y:340, set:"B" },
+      { x:2435, y:460, set:"A" },
+      { x:2825, y:460, set:"B" }
+    ],
+    goal: { x: 4305, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 17 关 · 连环",
+    width: 5910, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 300, x1: 3300 },
+    platforms: [
+      { x:-40, y:36, w:3300, set:"AB" },
+      { x:-20, y:460, w:620, set:"AB" },
+      { x:600, y:460, w:260, set:"B" },
+      { x:860, y:460, w:560, set:"AB" },
+      { x:1820, y:460, w:340, set:"A" },
+      { x:2160, y:460, w:560, set:"AB" },
+      { x:2720, y:460, w:260, set:"B" },
+      { x:2980, y:460, w:580, set:"AB" },
+      { x:3540, y:460, w:240, set:"AB" },
+      { x:3760, y:460, w:1530, set:"AB" },
+      { x:5270, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:1050, y:460, set:"A" },
+      { x:2400, y:460, set:"B" },
+      { x:4170, y:460, set:"B" },
+      { x:4560, y:460, set:"A" },
+      { x:4950, y:460, set:"B" }
+    ],
+    goal: { x: 5590, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 18 关 · 逆鳞",
+    width: 4660, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:1740, set:"AB" },
+      { x:2140, y:96, w:620, set:"B" },
+      { x:2120, y:460, w:260, set:"AB" },
+      { x:2780, y:460, w:260, set:"AB" },
+      { x:3020, y:460, w:60, set:"AB" },
+      { x:3090, y:200, w:270, set:"AB" },
+      { x:3420, y:340, w:280, set:"AB" },
+      { x:3740, y:460, w:300, set:"AB" },
+      { x:4020, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:780, y:460, set:"A" },
+      { x:1120, y:460, set:"B" },
+      { x:1460, y:460, set:"A" },
+      { x:1800, y:460, set:"B" },
+      { x:2450, y:120, set:"A", hang:true }
+    ],
+    goal: { x: 4340, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 19 关 · 鬼门",
+    width: 4400, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:480, set:"AB" },
+      { x:460, y:96, w:540, set:"A" },
+      { x:760, y:96, w:780, set:"B" },
+      { x:440, y:460, w:260, set:"AB" },
+      { x:1560, y:460, w:260, set:"AB" },
+      { x:1800, y:460, w:1840, set:"AB" },
+      { x:3620, y:460, w:160, set:"AB" },
+      { x:3760, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:2190, y:460, set:"B" },
+      { x:2560, y:460, set:"A" },
+      { x:2930, y:460, set:"B" },
+      { x:3300, y:460, set:"A" }
+    ],
+    goal: { x: 4080, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 20 关 · 无间",
+    width: 6480, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 300, x1: 3300 },
+    platforms: [
+      { x:-40, y:36, w:3300, set:"AB" },
+      { x:-20, y:460, w:620, set:"AB" },
+      { x:600, y:460, w:260, set:"B" },
+      { x:860, y:460, w:560, set:"AB" },
+      { x:1820, y:460, w:340, set:"A" },
+      { x:2160, y:460, w:560, set:"AB" },
+      { x:2720, y:460, w:260, set:"B" },
+      { x:2980, y:460, w:580, set:"AB" },
+      { x:3560, y:96, w:600, set:"B" },
+      { x:3540, y:460, w:260, set:"AB" },
+      { x:4180, y:460, w:260, set:"AB" },
+      { x:4420, y:460, w:1440, set:"AB" },
+      { x:5840, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:1050, y:460, set:"A" },
+      { x:2400, y:460, set:"B" },
+      { x:4800, y:460, set:"A" },
+      { x:5160, y:460, set:"B" },
+      { x:5520, y:460, set:"A" }
+    ],
+    goal: { x: 6160, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 21 关 · 试炼场",
+    width: 5030, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2070, set:"AB" },
+      { x:2470, y:96, w:700, set:"B" },
+      { x:2450, y:460, w:260, set:"AB" },
+      { x:3190, y:460, w:260, set:"AB" },
+      { x:3430, y:460, w:60, set:"AB" },
+      { x:3500, y:200, w:250, set:"AB" },
+      { x:3810, y:340, w:260, set:"AB" },
+      { x:4110, y:460, w:300, set:"AB" },
+      { x:4390, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:770, y:460, set:"A" },
+      { x:1110, y:460, set:"B" },
+      { x:1450, y:460, set:"A" },
+      { x:1790, y:460, set:"B" },
+      { x:2130, y:460, set:"A" },
+      { x:2820, y:120, set:"A", hang:true }
+    ],
+    goal: { x: 4710, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 22 关 · 双生劫",
+    width: 5055, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:480, set:"AB" },
+      { x:460, y:96, w:520, set:"B" },
+      { x:740, y:96, w:760, set:"A" },
+      { x:440, y:460, w:260, set:"AB" },
+      { x:1520, y:460, w:260, set:"AB" },
+      { x:1760, y:460, w:1390, set:"AB" },
+      { x:3130, y:460, w:60, set:"AB" },
+      { x:3200, y:200, w:250, set:"AB" },
+      { x:3510, y:340, w:250, set:"AB" },
+      { x:3865, y:200, w:240, set:"AB" },
+      { x:4135, y:460, w:300, set:"AB" },
+      { x:4415, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:2130, y:460, set:"B" },
+      { x:2470, y:460, set:"A" },
+      { x:2810, y:460, set:"B" }
+    ],
+    goal: { x: 4735, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 23 关 · 千针阵",
+    width: 4390, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:2290, set:"AB" },
+      { x:2670, y:460, w:180, set:"AB" },
+      { x:2850, y:96, w:640, set:"A" },
+      { x:2830, y:460, w:260, set:"AB" },
+      { x:3510, y:460, w:260, set:"AB" },
+      { x:3750, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:750, y:460, set:"A" },
+      { x:1070, y:460, set:"B" },
+      { x:1390, y:460, set:"A" },
+      { x:1710, y:460, set:"B" },
+      { x:2030, y:460, set:"A" },
+      { x:2350, y:460, set:"B" },
+      { x:3170, y:120, set:"B", hang:true }
+    ],
+    goal: { x: 4070, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 24 关 · 逆鳞甲",
+    width: 6865, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 1975, x1: 4975 },
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:60, set:"AB" },
+      { x:470, y:200, w:240, set:"AB" },
+      { x:770, y:340, w:240, set:"AB" },
+      { x:1115, y:200, w:230, set:"AB" },
+      { x:1375, y:460, w:300, set:"AB" },
+      { x:1635, y:36, w:3300, set:"AB" },
+      { x:1655, y:460, w:620, set:"AB" },
+      { x:2275, y:460, w:260, set:"B" },
+      { x:2535, y:460, w:560, set:"AB" },
+      { x:3495, y:460, w:340, set:"A" },
+      { x:3835, y:460, w:560, set:"AB" },
+      { x:4395, y:460, w:260, set:"B" },
+      { x:4655, y:460, w:580, set:"AB" },
+      { x:5215, y:460, w:1030, set:"AB" },
+      { x:6225, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:890, y:340, set:"A" },
+      { x:2725, y:460, set:"A" },
+      { x:4075, y:460, set:"B" },
+      { x:5575, y:460, set:"A" },
+      { x:5905, y:460, set:"B" }
+    ],
+    goal: { x: 6545, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 25 关 · 修罗",
+    width: 6890, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 300, x1: 3300 },
+    platforms: [
+      { x:-40, y:36, w:3300, set:"AB" },
+      { x:-20, y:460, w:620, set:"AB" },
+      { x:600, y:460, w:260, set:"B" },
+      { x:860, y:460, w:560, set:"AB" },
+      { x:1820, y:460, w:340, set:"A" },
+      { x:2160, y:460, w:560, set:"AB" },
+      { x:2720, y:460, w:260, set:"B" },
+      { x:2980, y:460, w:580, set:"AB" },
+      { x:3560, y:96, w:560, set:"B" },
+      { x:3880, y:96, w:800, set:"A" },
+      { x:3540, y:460, w:260, set:"AB" },
+      { x:4700, y:460, w:260, set:"AB" },
+      { x:4940, y:460, w:1330, set:"AB" },
+      { x:6250, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:1050, y:460, set:"A" },
+      { x:2400, y:460, set:"B" },
+      { x:5290, y:460, set:"B" },
+      { x:5610, y:460, set:"A" },
+      { x:5930, y:460, set:"B" }
+    ],
+    goal: { x: 6570, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 26 关 · 炼狱门",
+    width: 4735, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:1610, set:"AB" },
+      { x:1990, y:460, w:60, set:"AB" },
+      { x:2060, y:200, w:230, set:"AB" },
+      { x:2350, y:340, w:230, set:"AB" },
+      { x:2685, y:200, w:220, set:"AB" },
+      { x:2935, y:460, w:300, set:"AB" },
+      { x:3235, y:96, w:600, set:"B" },
+      { x:3215, y:460, w:260, set:"AB" },
+      { x:3855, y:460, w:260, set:"AB" },
+      { x:4095, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:740, y:460, set:"A" },
+      { x:1050, y:460, set:"B" },
+      { x:1360, y:460, set:"A" },
+      { x:1670, y:460, set:"B" },
+      { x:3535, y:120, set:"A", hang:true }
+    ],
+    goal: { x: 4415, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 27 关 · 九死",
+    width: 7375, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 3495, x1: 6495 },
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:60, set:"AB" },
+      { x:470, y:200, w:230, set:"AB" },
+      { x:760, y:340, w:220, set:"AB" },
+      { x:1085, y:200, w:220, set:"AB" },
+      { x:1365, y:340, w:210, set:"AB" },
+      { x:1615, y:460, w:300, set:"AB" },
+      { x:1895, y:460, w:1300, set:"AB" },
+      { x:3155, y:36, w:3300, set:"AB" },
+      { x:3175, y:460, w:620, set:"AB" },
+      { x:3795, y:460, w:260, set:"B" },
+      { x:4055, y:460, w:560, set:"AB" },
+      { x:5015, y:460, w:340, set:"A" },
+      { x:5355, y:460, w:560, set:"AB" },
+      { x:5915, y:460, w:260, set:"B" },
+      { x:6175, y:460, w:580, set:"AB" },
+      { x:6735, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:870, y:340, set:"B" },
+      { x:2235, y:460, set:"A" },
+      { x:2545, y:460, set:"B" },
+      { x:2855, y:460, set:"A" },
+      { x:4245, y:460, set:"A" },
+      { x:5595, y:460, set:"B" }
+    ],
+    goal: { x: 7055, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 28 关 · 无间道",
+    width: 5350, spawn: { x: 60, y: 400 },
+    hint: "",
+    platforms: [
+      { x:-20, y:460, w:480, set:"AB" },
+      { x:460, y:96, w:500, set:"A" },
+      { x:720, y:96, w:740, set:"B" },
+      { x:1220, y:96, w:740, set:"A" },
+      { x:440, y:460, w:260, set:"AB" },
+      { x:1980, y:460, w:260, set:"AB" },
+      { x:2220, y:460, w:1610, set:"AB" },
+      { x:3810, y:460, w:60, set:"AB" },
+      { x:3880, y:200, w:230, set:"AB" },
+      { x:4170, y:340, w:220, set:"AB" },
+      { x:4430, y:460, w:300, set:"AB" },
+      { x:4710, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:2560, y:460, set:"B" },
+      { x:2870, y:460, set:"A" },
+      { x:3180, y:460, set:"B" },
+      { x:3490, y:460, set:"A" }
+    ],
+    goal: { x: 5030, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 29 关 · 轮回",
+    width: 8475, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 2570, x1: 5570 },
+    platforms: [
+      { x:-20, y:460, w:440, set:"AB" },
+      { x:400, y:460, w:1870, set:"AB" },
+      { x:2230, y:36, w:3300, set:"AB" },
+      { x:2250, y:460, w:620, set:"AB" },
+      { x:2870, y:460, w:260, set:"B" },
+      { x:3130, y:460, w:560, set:"AB" },
+      { x:4090, y:460, w:340, set:"A" },
+      { x:4430, y:460, w:560, set:"AB" },
+      { x:4990, y:460, w:260, set:"B" },
+      { x:5250, y:460, w:580, set:"AB" },
+      { x:5810, y:460, w:60, set:"AB" },
+      { x:5880, y:200, w:220, set:"AB" },
+      { x:6160, y:340, w:210, set:"AB" },
+      { x:6475, y:200, w:210, set:"AB" },
+      { x:6715, y:460, w:300, set:"AB" },
+      { x:7015, y:96, w:560, set:"B" },
+      { x:6995, y:460, w:260, set:"AB" },
+      { x:7595, y:460, w:260, set:"AB" },
+      { x:7835, y:460, w:520, set:"AB" }
+    ],
+    spikes: [
+      { x:730, y:460, set:"A" },
+      { x:1030, y:460, set:"B" },
+      { x:1330, y:460, set:"A" },
+      { x:1630, y:460, set:"B" },
+      { x:1930, y:460, set:"A" },
+      { x:3320, y:460, set:"A" },
+      { x:4670, y:460, set:"B" },
+      { x:7295, y:120, set:"A", hang:true }
+    ],
+    goal: { x: 8155, y: 368, w: 44, h: 92, surf: 460 }
+  },
+  {
+    name: "第 30 关 · 地狱",
+    width: 9845, spawn: { x: 60, y: 400 },
+    hint: "",
+    ratchet: { x0: 300, x1: 3300 },
+    platforms: [
+      { x:-40, y:36, w:3300, set:"AB" },
+      { x:-20, y:460, w:620, set:"AB" },
+      { x:600, y:460, w:260, set:"B" },
+      { x:860, y:460, w:560, set:"AB" },
+      { x:1820, y:460, w:340, set:"A" },
+      { x:2160, y:460, w:560, set:"AB" },
+      { x:2720, y:460, w:260, set:"B" },
+      { x:2980, y:460, w:580, set:"AB" },
+      { x:3540, y:460, w:1530, set:"AB" },
+      { x:5050, y:460, w:60, set:"AB" },
+      { x:5120, y:200, w:210, set:"AB" },
+      { x:5390, y:340, w:200, set:"AB" },
+      { x:5695, y:200, w:200, set:"AB" },
+      { x:5955, y:340, w:190, set:"AB" },
+      { x:6185, y:460, w:300, set:"AB" },
+      { x:6485, y:96, w:520, set:"B" },
+      { x:6765, y:96, w:760, set:"A" },
+      { x:6465, y:460, w:260, set:"AB" },
+      { x:7545, y:460, w:260, set:"AB" },
+      { x:7785, y:460, w:1240, set:"AB" },
+      { x:9025, y:96, w:760, set:"A" },
+      { x:9005, y:460, w:260, set:"AB" },
+      { x:9805, y:460, w:260, set:"AB" }
+    ],
+    spikes: [
+      { x:1050, y:460, set:"A" },
+      { x:2400, y:460, set:"B" },
+      { x:3860, y:460, set:"A" },
+      { x:4150, y:460, set:"B" },
+      { x:4440, y:460, set:"A" },
+      { x:4730, y:460, set:"B" },
+      { x:5490, y:340, set:"A" },
+      { x:8105, y:460, set:"B" },
+      { x:8395, y:460, set:"A" },
+      { x:8685, y:460, set:"B" },
+      { x:9385, y:120, set:"B", hang:true }
+    ],
+    goal: { x: 9575, y: 96, w: 44, h: 70, surf: 118, ceil:true }
   }
 ];
 
@@ -367,11 +914,11 @@ function saveRecords(){ try { localStorage.setItem("sixiang_records_v1", JSON.st
 
 const ACH = [
   { id: "first",  name: "第一步",   desc: "通关第 1 关" },
-  { id: "half",   name: "过半",     desc: "通关第 4 关" },
-  { id: "all",    name: "全境移位", desc: "通关全部 10 关" },
+  { id: "half",   name: "过半",     desc: "通关第 15 关" },
+  { id: "all",    name: "全境移位", desc: "通关全部 30 关" },
   { id: "clean",  name: "毫发无损", desc: "任意一关零死亡通关" },
-  { id: "frugal", name: "精打细算", desc: "全程不超过 150 次移位通关" },
-  { id: "swift",  name: "疾风",     desc: "全程 300 秒内通关" }
+  { id: "frugal", name: "精打细算", desc: "全程不超过 520 次移位通关" },
+  { id: "swift",  name: "疾风",     desc: "全程 950 秒内通关" }
 ];
 let achDone = [];
 try { achDone = JSON.parse(localStorage.getItem("sixiang_ach_v1") || "[]"); if (!Array.isArray(achDone)) achDone = []; } catch(e) {}
@@ -389,7 +936,7 @@ function commitLevel(){
   if (rec.s === null || levelShifts < rec.s) rec.s = levelShifts;
   records.lv[levelIdx] = rec; saveRecords();
   if (levelIdx === 0) unlockAch("first");
-  if (levelIdx === 3) unlockAch("half");
+  if (levelIdx === 14) unlockAch("half");
   if (deaths === levelDeathsStart) unlockAch("clean");
 }
 function commitRun(){
@@ -397,8 +944,8 @@ function commitRun(){
   if (records.run.s === null || runShifts < records.run.s) records.run.s = runShifts;
   saveRecords();
   unlockAch("all");
-  if (runShifts <= 150) unlockAch("frugal");
-  if (runTime <= 300) unlockAch("swift");
+  if (runShifts <= 520) unlockAch("frugal");
+  if (runTime <= 950) unlockAch("swift");
 }
 
 function curState(){ return CONFIG.states[ring]; }
@@ -772,12 +1319,12 @@ function drawTitle(){
   ctx.textAlign = "center";
   ctx.fillStyle = "#ffd166"; ctx.font = "bold 76px system-ui";
   ctx.fillText("四相移位", W / 2, 168);
-  // 选关按钮，两行 × 5（命中区与 pointerdown 共用 titleBtns）
+  // 选关按钮，三行 × 10（命中区与 pointerdown 共用 titleBtns）
   titleBtns = [];
-  const bw = 76, bh = 48, gap = 10, per = 5;
+  const bw = 76, bh = 48, gap = 10, per = 10;
   const rowW = bw * per + gap * (per - 1), bx0 = (W - rowW) / 2;
   for (let i = 0; i < LEVELS.length; i++){
-    const bx = bx0 + (i % per) * (bw + gap), by = 252 + Math.floor(i / per) * 62;
+    const bx = bx0 + (i % per) * (bw + gap), by = 232 + Math.floor(i / per) * 62;
     titleBtns.push({ x: bx, y: by, w: bw, h: bh, i });
     const open = i <= unlocked;
     ctx.fillStyle = open ? "#ffd166" : "rgba(255,255,255,0.10)";
@@ -814,23 +1361,25 @@ function drawBoard(){
   ctx.textAlign = "center"; ctx.fillStyle = "#fff"; ctx.font = "bold 20px system-ui";
   ctx.fillText("排行榜", 480, 92);
   ctx.font = "14px system-ui"; ctx.fillStyle = "#8d99ae";
-  ctx.textAlign = "left";   ctx.fillText("关卡", 170, 128);
-  ctx.textAlign = "center"; ctx.fillText("最速", 470, 128); ctx.fillText("最少移位", 690, 128);
-  ctx.font = "15px system-ui";
-  for (let i = 0; i < LEVELS.length; i++){
-    const y = 160 + i * 27, rec = records.lv[i];
-    ctx.textAlign = "left"; ctx.fillStyle = "#dfe3ee";
-    ctx.fillText("第 " + (i + 1) + " 关", 170, y);
-    ctx.textAlign = "center"; ctx.fillStyle = "#fff";
-    ctx.fillText(fmtT(rec ? rec.t : null), 470, y);
-    ctx.fillText(rec && rec.s !== null && rec.s !== undefined ? String(rec.s) : "—", 690, y);
+  for (const bx of [150, 520]){
+    ctx.textAlign = "left";   ctx.fillText("关卡", bx, 126);
+    ctx.textAlign = "center"; ctx.fillText("最速", bx + 170, 126); ctx.fillText("最少移位", bx + 290, 126);
   }
-  const y = 160 + LEVELS.length * 27 + 8;
+  ctx.font = "14px system-ui";
+  for (let i = 0; i < LEVELS.length; i++){
+    const bx = i < 15 ? 150 : 520, y = 150 + (i % 15) * 20, rec = records.lv[i];
+    ctx.textAlign = "left"; ctx.fillStyle = "#dfe3ee";
+    ctx.fillText("第 " + (i + 1) + " 关", bx, y);
+    ctx.textAlign = "center"; ctx.fillStyle = "#fff";
+    ctx.fillText(fmtT(rec ? rec.t : null), bx + 170, y);
+    ctx.fillText(rec && rec.s !== null && rec.s !== undefined ? String(rec.s) : "—", bx + 290, y);
+  }
+  const y = 452;
   ctx.textAlign = "left"; ctx.fillStyle = "#ffd166";
-  ctx.fillText("全程", 170, y);
+  ctx.fillText("全程", 150, y);
   ctx.textAlign = "center";
-  ctx.fillText(fmtT(records.run.t), 470, y);
-  ctx.fillText(records.run.s === null || records.run.s === undefined ? "—" : String(records.run.s), 690, y);
+  ctx.fillText(fmtT(records.run.t), 320, y);
+  ctx.fillText(records.run.s === null || records.run.s === undefined ? "—" : String(records.run.s), 440, y);
   ctx.fillStyle = "#8d99ae"; ctx.font = "13px system-ui";
   ctx.fillText("点任意处关闭", 480, 478);
 }
