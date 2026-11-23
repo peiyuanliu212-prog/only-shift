@@ -884,6 +884,8 @@ let level = LEVELS[0];
 let unlocked = 0;
 try { unlocked = Math.max(0, Math.min(LEVELS.length - 1, parseInt(localStorage.getItem("sixiang_save_v1") || "0", 10) || 0)); } catch(e) {}
 function saveUnlock(){ try { localStorage.setItem("sixiang_save_v1", String(unlocked)); } catch(e) {} }
+// 测试直达：?unlock=30 打开即全关解锁（并写入存档，之后普通链接也保持解锁）
+try { if (new URLSearchParams(location.search).get("unlock") === "30") { unlocked = LEVELS.length - 1; saveUnlock(); } } catch(e) {}
 let titleBtns = [];
 let uiBtns = [];
 let titlePanel = null;          // null | "board" | "ach"
